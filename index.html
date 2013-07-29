@@ -1,0 +1,98 @@
+<html>
+<head>
+	<style>
+		.entrada{
+			/*300 86*/
+			
+			width:300px;
+			height:108px; /* 86 + 12 + 10 */
+			position:absolute; /*El div debe tener la propiedad position distinta de static*/
+			top: 50%;
+			left:50%;
+			margin-top: -84px; /* El valor 200 es ficticio, debes cambiarlo en cada caso por la mitad de la altura de tu imagen*/
+			margin-left: -150px; /* El 200 deberás sustituirlo por la mitad del ancho de la imagen */
+			text-align:center;
+		}
+		
+		
+		a{
+			font-family:'Arial, Helvetica, sans-serif';
+			text-align:center;
+			
+			font-size:12px;
+			color:black;
+			display:inline-block;
+			text-decoration:none;
+			margin-top:31px;
+			
+			/*
+			background:white;
+			
+			*/
+			color:white;
+			transition:background-color .5s, color .5s;
+			border-radius:20px;
+			padding:4px 12px 3px 16px;
+			
+		}
+		
+		a:hover{
+			color:#d7a175;
+			background:black;
+		}
+		
+		a{
+			color:#d7a175;
+			background:white;			
+		}
+		
+		@-webkit-keyframes myfirst /* Safari and Chrome */
+		{
+			
+			0%   {0pacity: .1; -moz-opacity:0.1;}
+			20%  {opacity: 1; background:black; -moz-opacity:1; }
+			22%  {opacity: .1; -moz-opacity:0.1; }
+			24%  {opacity: 1; background:greenyellow; -moz-opacity:1;}
+			40%  {opacity: 1; background:greenyellow; }
+			42%  {opacity: .1; -moz-opacity:0.1;}
+			45%  {opacity: 1;  background:red; -moz-opacity:1;}
+			60%  {opacity: 1;  background:red;}
+			62%  {opacity: .1; -moz-opacity:0.1;}
+			64%  {opacity: 1; background: white; -moz-opacity:1;}
+			80%  {opacity: 1; background: white; }			
+			100%  {opacity: .5; background: #E0ECF8; -moz-opacity:0.5;}			
+		}
+		body:after{
+			 /* animation: myfirst 15s;
+			-webkit-animation: myfirst 15s; 
+			-moz-animation-name:myfirst;
+			-moz-animation-duration::15s; */
+			position:relative; height:100%; margin: 0;padding: 0;
+		}
+		.entrada{z-index: 0;}
+		.entrada:after{			
+			padding: 48px;
+			border-radius: 23px;
+			position: absolute;
+			opacity: .9;
+			content: "";
+			width: 300px;
+			height: 108px;
+			left: 100%;
+			margin-left: -344px;
+			margin-top: -131px;
+			z-index: -1;
+		 
+		}
+	</style>
+</head>
+<body style="background:black ;text-align:center; padding:0; margin:0;">
+	<div style="background:width:100%; height:100%; display: inline-block;">
+		
+		<div class="entrada">
+			<img src='web/imagenes/logo_2.png' style="width:300px; height:86px;"/>
+			<a style="margin-right:30px;" href="es/paginas/inicio">ESPAÑOL    </a><a href="en/pages/home">ENGLISH</a>
+		</div>
+	</div>
+</body>
+</html>

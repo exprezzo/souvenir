@@ -1,16 +1,17 @@
 body{paddin:0;margin:0; background: black url('http://www.dinpattern.com/tiles/steel.png'); }
 #contenido{				
-	-webkit-box-shadow: inset 0 11px 4px -4px #aaa;
-	-moz-box-shadow: inset 0 11px 4px -4px #aaa;
-	box-shadow: inset 0 11px 4px -4px #aaa; 
-	background:#E0ECF8 ;padding:20px 0 0px 0;position:relative; text-align:center;
+	-webkit-box-shadow: inset 0 11px 26px -6px;
+	-moz-box-shadow: inset 0 11px 26px -6px;
+	box-shadow: inset 0 11px 26px -6px; 
+	background:#E0ECF8 ;padding:20px 0 0px 0; text-align:center;
+	position:relative;
 }
 #footer{
 	background:#4c4c4c url('http://www.dinpattern.com/tiles/steel.png'); position:relative;
 	width:100%; height:64px; color:white;text-align:center;
-	-webkit-box-shadow: 0 -6px 8px rgba(0,0,0, 0.4);
-	-moz-box-shadow: 0 -6px 8px rgba(0,0,0, 0.4);
-	box-shadow: 0 -6px 8px rgba(0,0,0, 0.4);	
+	-webkit-box-shadow: 0 -7px 13px rgba(0,0,0, 1.4);
+	-moz-box-shadow: 0 -7px 13px rgba(0,0,0, 1.4);
+	box-shadow: 0 -7px 13px rgba(0,0,0, 1.4);	
 }
 
 #header{
