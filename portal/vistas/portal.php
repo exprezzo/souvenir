@@ -36,7 +36,7 @@
 
 		#contenido{
 			padding:0;
-			background-image:url(/souvenir/web/imagenes/folklor.jpg);		
+			background-image:url(<?php echo $WEB_BASE; ?>imagenes/folklor.jpg);		
 		}
 
 .caroufredsel_wrapper{display:inline-block !important; }

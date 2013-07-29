@@ -1,38 +1,57 @@
-<?php
-		
-	 $_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];
+<?php		
+	 $_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];	
 	
-	$Idiomas['en']['titulo'] = 'Product Catalog';	
-	$Idiomas['es']['titulo'] = 'Catalogo de productos';	
+	$pagina['en']=array(
+		'titulo'	=>'Product Catalog',
+		'contenido'	=>''
+	);
 	
-	$Idiomas['en']['categoria']['souvenirs'] = 'Souvenirs';
-	$Idiomas['en']['categoria']['etnico'] = 'Ethnic';
-	$Idiomas['en']['categoria']['playa'] = 'beach';
-	$Idiomas['en']['categoria']['food'] = 'Food Miles';
+	$pagina['es']=array(
+		'titulo'	=>'Catalogo de productos',
+		'contenido'	=>''
+	);
 	
-	$Idiomas['es']['categoria']['souvenirs'] = 'Souvenirs';
-	$Idiomas['es']['categoria']['etnico'] = 'Etnico';
-	$Idiomas['es']['categoria']['playa'] = 'Playa';
-	$Idiomas['es']['categoria']['food'] = 'Food Miles';
+	$categorias['es']=array(
+		array(
+			'titulo'=>'Souvenirs',
+			'link'	=>'productos/souvenirs'
+		),array(
+			'titulo'=>'Etnico',
+			'link'	=>'productos/etnico'
+		),array(
+			'titulo'=>'Playa',
+			'link'	=>'productos/playa'
+		),array(
+			'titulo'=>'Food Miles',
+			'link'	=>'productos/food'
+		)
+	);
 	
+	$categorias['en']=array(
+		array(
+			'titulo'=>'Souvenirs',
+			'link'	=>'products/souvenirs'
+		),array(
+			'titulo'=>'Ethnic',
+			'link'	=>'products/ethnic'
+		),array(
+			'titulo'=>'Beach',
+			'link'	=>'products/beach'
+		),array(
+			'titulo'=>'Food Miles',
+			'link'	=>'products/food'
+		)
+	);
 	
-	$Links['es']['souvenirs']='productos/souvenirs';
-	$Links['es']['etnico']='productos/etnico';
-	$Links['es']['playa']='productos/playa';
-	$Links['es']['food']='productos/food';
-	
-	$Links['en']['souvenirs']='products/souvenirs';
-	$Links['en']['etnico']='products/ethnic';
-	$Links['en']['playa']='products/beach';
-	$Links['en']['food']='products/food';
 	
 ?>
-<h1><?php echo $Idiomas[$_idioma]['titulo']; ?> </h1>
+<h1><?php echo $pagina[$_idioma]['titulo']; ?> </h1>
 <ul>
-	<li><a href="<?php echo $APP_PATH.$_idioma.'/'.$Links[$_idioma]['souvenirs']; ?> "><?php echo $Idiomas[$_idioma]['categoria']['souvenirs']; ?> </a></li>
-	<li><a href="<?php echo $APP_PATH.$_idioma.'/'.$Links[$_idioma]['etnico']; ?> "><?php echo $Idiomas[$_idioma]['categoria']['etnico']; ?> </a></li>
-	<li><a href="<?php echo $APP_PATH.$_idioma.'/'.$Links[$_idioma]['playa']; ?> "><?php echo $Idiomas[$_idioma]['categoria']['playa']; ?> </a></li>	
-	<li><a href="<?php echo $APP_PATH.$_idioma.'/'.$Links[$_idioma]['food']; ?> "><?php echo $Idiomas[$_idioma]['categoria']['food']; ?> </a></li>
+	<?php 
+		foreach($categorias[$_idioma] as $categoria){
+			echo '<li><a href="'.$APP_PATH.$_idioma.'/'.$categoria['link'] .'">'.$categoria['titulo'].'</a></li>';
+		}
+	?>	
 </ul>
 
 
