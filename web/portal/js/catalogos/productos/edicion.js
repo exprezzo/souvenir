@@ -137,6 +137,9 @@
 		//-----------------------------------
 		var datos=paramObj;
 		
+		var imagenes=$(tabId+' .grid_articulos').wijgrid('data');
+		datos.imagenes = imagenes;
+		
 		//Envia los datos al servidor, el servidor responde success true o false.
 		
 		$.ajax({
@@ -165,6 +168,16 @@
 				var objId = '/'+me.configuracion.modulo.nombre+'/'+me.controlador.nombre+'/editar?id='+resp.datos.id;
 				objId = objId.toLowerCase();
 				$(me.tabId ).attr('objId',objId);				
+				
+				
+				var imagenes=resp.datos.imagenes;
+				var grid=$(me.tabId+" .grid_articulos");
+				var data=grid.wijgrid('data');
+				data.length=0;
+				for(var i=0; i<imagenes.length; i++){
+					data.push(imagenes[i]);
+				}
+				grid.wijgrid('ensureControl', true);
 				
 				$.gritter.add({
 					position: 'bottom-left',

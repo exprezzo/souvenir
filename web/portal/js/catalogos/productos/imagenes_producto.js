@@ -7,7 +7,7 @@ var ImagenesProducto=function (tabId){
 		var tabId=config.tabId, 
 			padre = config.padre, 
 			fk_viaje=config.fk_viaje, 
-			articulos= config.articulos;
+			articulos= config.imagenes;
 		
 		// this.target= config.target;
 		
@@ -35,10 +35,7 @@ var ImagenesProducto=function (tabId){
 		
 		var fields=[			
 			{ name: "id",default:0},			
-			{ name: "fk_concepto"},
-			{ name: "nombreConcepto"},
-			{ name: "costo"},
-			{ name: "fechaa"},
+			{ name: "imagen"},
 			{ name: "eliminado",default:false}			
 		];
 		
@@ -78,154 +75,22 @@ var ImagenesProducto=function (tabId){
 			},
 			columns: [
 				{dataKey: "id", visible:false, headerText: "ID"},
-				{dataKey: "nombre", headerText: "Concepto",width:"300px", valueRequired: true},
-				{dataKey: "costo", headerText: "Costo",editable:true, dataType: "currency",width:"150px", valueRequired: true},
-				{dataKey: "fecha", headerText: "Fecha",width:"100px"},
-				{dataKey: "fk_viaje", headerText: "fk_viaje", visible:false},
-				{dataKey: "fk_concepto", headerText: "fk_concepto", visible:false},
-				{dataKey: "descripcion", headerText: "Descripcion", visible:true},
-				{dataKey: "documento", headerText: "documento", visible:false},
-				{dataKey: "codigo", headerText: "codigo", visible:false},
-				{dataKey: "fk_tipo_gasto", headerText: "fk_tipo_gasto", visible:false},
-				{dataKey: "tipo_gasto", headerText: "tipo_gasto", visible:false},
-				{dataKey: "fk_vehiculo", headerText: "fk_vehiculo", visible:false}
+				{dataKey: "imagen", headerText: "Ruta Imagen",width:"300px",visible:true},
+				{dataKey: "fk_producto", visible:false, headerText: "fk_producto"}				
 			]
 		});
 		var me=this;
 		
-		gridPedidos.wijgrid({ beforeCellEdit: function(e, args) {
-				var row = args.cell.row() ;
-				var index = args.cell.rowIndex();
-				var sel=gridPedidos.wijgrid('selection');
-				sel.addRows(index);
-				
-				if (args.cell.column().editable === false){
-					return false;
-				}
-
-				switch (args.cell.column().dataKey) {
-					case "nombre":
-						var combo=
-						$("<input />")
-							.val(args.cell.value())
-							.appendTo(args.cell.container().empty());
-						args.handled = true;
-						
-						var domCel = args.cell.tableCell();
-						combo.css('width',	$(domCel).width()-10 );
-						combo.css('height',	$(domCel).height()-10 );
-						me.configurarComboConcepto(combo);						
-					break;
-					case 'fecha':
-						
-						var fechaField= $("<input />")
-							.val(args.cell.value())
-							.appendTo(args.cell.container().empty());
-						args.handled = true;
-						
-						var domCel = args.cell.tableCell();
-						fechaField.css('width',	$(domCel).width()-10 );
-						fechaField.css('height',	$(domCel).height()-10 );
-						
-						$(fechaField).wijinputdate({ dateFormat: 'dd/MM/yyyy',showTrigger:true });
-						$(fechaField).focus().select();
-					break;
-					default:
-						var input=$("<input />")
-							.val(args.cell.value())
-							.appendTo(args.cell.container().empty()).focus().select();
-						var domCel = args.cell.tableCell();
-						input.css('width',	$(domCel).width()  -10 );
-						input.css('height',	$(domCel).height() -10 );
-						args.handled = true;
-						return true;
-					break;
-				}
-			}
-		});
-		gridPedidos.wijgrid({beforeCellUpdate:function(e, args) {
-				switch (args.cell.column().dataKey) {					
-					case "nombre":
-						args.value = args.cell.container().find("input").val();
-						me.padre.editado=true;
-						if (me.articulo!=undefined){
-							var row=args.cell.row();							
-							row.data.costo=me.articulo.costo;							
-							row.data.fk_concepto = me.articulo.value;						
-							row.data.nombre = me.articulo.nombre;
-							row.data.fecha = me.articulo.fecha;
-							gridPedidos.wijgrid('ensureControl',true);
-							
-						}
-						// me.padre.editado=true;
-						break;	
-					case 'fecha':	
-						me.padre.editado=true;
-						args.value = args.cell.container().find("input").val();
-						var row=args.cell.row();							
-						row.data.fecha =args.value;						
-						gridPedidos.wijgrid('ensureControl',true);
-						
-					break;
-					case 'costo':
-						me.padre.editado=true;
-						args.value = args.cell.container().find("input").val();
-						var row=args.cell.row();							
-						row.data.costo =args.value;												
-						gridPedidos.wijgrid('ensureControl',true);
-						
-					break;
-					default:						
-						args.value = args.cell.container().find("input").val();	
-						var row=args.cell.row();						
-						gridPedidos.wijgrid('ensureControl',true);						
-						
-				}
-				me.articulo=undefined;		
-			}			
-		});
 		
-		gridPedidos.wijgrid({loaded: function () {
-			var datos=gridPedidos.wijgrid('data');
-			
-			var costo=0;
-			for(var i=0; i<datos.length; i++ ){
-				if ( !datos[i].eliminado ) costo+= ( datos[i].costo * 1);				
-			}
-			
-			
-			$(me.tabId+' [name="costo"]').val(costo);
-			$(me.tabId+' .lblGasto').html( "$" +costo.formatMoney(2,',','.') );
-			
-			if ( me.padre.depositos != undefined){
-				
-				me.padre.diferencia = me.padre.depositos - costo;
-				$(me.tabId+' .lblDiferencia').html( "$" +me.padre.diferencia.formatMoney(2,',','.') );
-				
-				
-			}
-			
-			if ( me.padre.diferencia != undefined && me.padre.comision != undefined ){
-				me.padre.pagar = me.padre.comision - me.padre.diferencia;
-				$(me.tabId + ' .lblPagar').html( "$" +me.padre.pagar.formatMoney(2,',','.') );
-			}
-			
-			me.padre.gastos= costo;
-		}}); 
+		
+		
+		
 
 		gridPedidos.wijgrid({cancelEdit:function(){				
 				$(me.tabId+' .grid_articulos').wijgrid('ensureControl',true);
 			}
 		});
-		gridPedidos.wijgrid({ selectionChanged: function (e, args) { 								
-			var item=args.addedCells.item(0);						
-			var row=item.row();
-			var data=row.data;			
-			me.selected=data;			
-			me.selected.dataItemIndex=row.dataItemIndex;			
-			me.selected.sectionRowIndex=row.sectionRowIndex;
-			
-		} });
+	
 		
 		//corregir bug al expandir/colapsar
 		gridPedidos.click(function(){
@@ -402,74 +267,7 @@ var ImagenesProducto=function (tabId){
 		
 	};
 	
-	this.configurarComboConcepto=function(target){		
-		// alert(cantidad);
-		
-		var tabId=this.tabId;
-		var me=this;
-		var fields=[										
-			{name: 'costo'},
-			{name: 'label', mapping: 'nombre'}, 
-			{name: 'value'}, 
-			{name: 'fecha'}, 
-			{name: 'selected',defaultValue: false}
-		];
-		
-		var myReader = new wijarrayreader(fields);
-		
-		var proxy = new wijhttpproxy({
-			url: kore.mod_url_base+'viajes/buscarConceptos',
-			dataType:"json"			
-		});
-		
-		var datasource = new wijdatasource({
-			reader:  new wijarrayreader(fields),
-			proxy: proxy,
-			loaded: function (data) {},
-			loading: function (dataSource, userData) {                            								
-				dataSource.proxy.options.data=dataSource.proxy.options.data || {};				 
-				dataSource.proxy.options.data.nombre = (userData) ?  userData.value : '';				 
-            }
-		});
-		
-		datasource.reader.read= function (datasource) {			
-			var totalRows=datasource.data.totalRows;			
-			datasource.data = datasource.data.rows;
-			datasource.data.totalRows = totalRows;
-			myReader.read(datasource);
-		};			
-		
-		datasource.load();	
-		
-		var combo=target.wijcombobox({
-			data: datasource,
-			showTrigger: true,
-			minLength: 1,
-			forceSelectionText: false,
-			autoFilter: true,			
-			search: function (e, obj) {},
-			select: function (e, item) 
-			{		
-				me.padre.editado=true;
-				var rowdom=$(me.tabId+' .grid_articulos tbody tr:eq('+me.selected.sectionRowIndex +')');								
-				item.costo*=1;				
-				me.articulo=item;
-				
-				console.log("item"); console.log(item);
-				
-				rowdom.find('td:eq(1) div').html( '$'+item.costo.formatMoney(2,',','.') );
-				rowdom.find('td:eq(2) div').html( item.fecha );
-				// rowdom.find('td:eq(2) div').html(item.nombre);
-								
-				// rowdom.find('td:eq(4) div').html( '$'+item.costo.formatMoney(2,',','.') );
-				// rowdom.find('td:eq(5) div').html( '$'+item.subtotal.formatMoney(2,',','.') );
-				// rowdom.find('td:eq(6) div').html( '$'+iva.formatMoney(2,',','.') );
-				// rowdom.find('td:eq(7) div').html( '$'+item.total.formatMoney(2,',','.') );
-				return true;
-			}
-		});
-		combo.focus().select();			
-	};
+	
 	
 	this.nuevo=function(){	
 		this.padre.editado=true;

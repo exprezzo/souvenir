@@ -33,7 +33,7 @@
 			fk_padre:$('#'+config.tab.id + ' [name="'+config.pk+'"]').val(),
 			imagenes: <?php echo json_encode($this->imagenes); ?>
 		 };
-		 var detalle=new DetallesViaje();
+		 var detalle=new ImagenesProducto();
 		 detalle.init(paramsDetalle);
 	});
 </script>
