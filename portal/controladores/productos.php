@@ -1,73 +1,36 @@
 <?php
-class Productos extends Controlador{	
-	function mostrarVista($vistaFile=''){	
-		$vista= $this->getVista();		
-
-		$pagina=array();
-		/*
-		$pagina['en']=array(
-			'titulo'	=>'Food',
-			'contenido'	=>'',
-			'rutaPadre'=>'pages/gallery',
-			'tituloPadre'=>'Gallery'
-		);
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/producto_modelo.php';
+class productos extends Controlador{
+	var $modelo="producto";
+	var $campos=array('id','codigo','nombre','descripcion','precio','imagen','nombre_en','descripcion_en','orden');
+	var $pk="id";
+	var $nombre="productos";
 	
-		$pagina['es']=array(
-			'titulo'	=>'Food',
-			'contenido'	=>'',
-			'rutaPadre'=>'paginas/galeria',
-			'tituloPadre'=>'Galeria'
-		);
+	function nuevo(){		
+		$campos=$this->campos;
+		$vista=$this->getVista();				
+		for($i=0; $i<sizeof($campos); $i++){
+			$obj[$campos[$i]]='';
+		}
+		$vista->datos=$obj;		
 		
-		$vista->pagina = $pagina;
-		*/
+		global $_PETICION;
+		$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
 		
-		$productos=array(
-			array(
-				'id'=>1,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			),
-			array(
-				'id'=>2,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			),
-			array(
-				'id'=>3,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			),
-			array(
-				'id'=>4,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			),
-			array(
-				'id'=>5,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			),
-			array(
-				'id'=>6,
-				'nombre'=>'El producto',
-				'imagen'=>'imagen.jpg',
-				'descripcion'=>'aqui para la descripcion',
-				'precio'=>'$15,080.00'
-			)
-		);
-		$vista->productos=$productos;
-		return $vista->mostrar( '/portal', true);
+		
+	}
+	
+	function guardar(){
+		return parent::guardar();
+	}
+	function borrar(){
+		return parent::borrar();
+	}
+	function editar(){
+		return parent::editar();
+	}
+	function buscar(){
+		return parent::buscar();
 	}
 }
 ?>

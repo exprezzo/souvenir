@@ -50,7 +50,7 @@ left: 0;
 	
 	/*		*/
 	
-	.destacados_wrap:before, .destacados_wrap:after {
+	.titulo_papel:before{
 		border-style: solid;
 		border-color: transparent;
 		bottom: -10px;
@@ -58,17 +58,13 @@ left: 0;
 		position:absolute;
 	}
 
-	.destacados_wrap:before {
-		border-width: 0 20px 10px 0;
-		border-right-color: #0B0B3B; /* Color de la sombra del doblez */
-		left: 0;
+	.titulo_papel:before {
+		border-width: 0 0px 13px 10px;
+		border-color: transparent transparent #585858 transparent;
+		left: -11px;
+		margin-bottom: 29px;
 	}
 
-	.destacados_wrap:after {
-		border-width: 0 0 10px 20px;
-		border-left-color: #0B0B3B; /* Color de la sombra del doblez */
-		right: 0;
-	} 
 	
 	
 </style>
@@ -105,17 +101,18 @@ left: 0;
 		
 		$Idioma['es']['Paginas']['Inicio']['bienvenido']='Bienvenido';
 		$Idioma['es']['Paginas']['Inicio']['mensaje_catalogos']='Visite nuestro cat&aacute;logo';
-		$Idioma['es']['Paginas']['Inicio']['titulo_catalogos']='Variedad de productos';
+		$Idioma['es']['Paginas']['Inicio']['titulo_catalogos']='Galeria';
 		
 		$Idioma['en']['Paginas']['Inicio']['bienvenido']='Welcome';
 		
 		$Idioma['en']['Paginas']['Inicio']['mensaje_catalogos']='See our products';
+		$Idioma['en']['Paginas']['Inicio']['titulo_catalogos']='Gallery';
 		
 	?>
-	<h2 style="margin: 0 0 0 20px;
+	<h2 class="titulo_papel" style="margin: 0 0 0 20px;
 position: absolute;
 text-align: center;
-top: -31px;
+top: -33px;
 color: black;
 background: beige;
 padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['bienvenido']; ?></h2>
@@ -126,13 +123,13 @@ padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['
 		<div class="ws_images">
 			<ul>
 				<li><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto2_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto2_1280" title="tumblr_moguq5kbVk1qaz9lto2_1280" id="wows1_0"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/320x240__banner_26.jpg" alt="320x240 - banner 26" title="320x240 - banner 26" id="wows1_1"/>dfjadsh lljal sal alkj alj a la sl jsalj ksdaf ashdf jhsaldfk jas lflakjdjhaskjlaljksd aljsfd ljkasl djkf</li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/banner_junco_2.jpg" alt="banner_junco_2" title="banner_junco_2" id="wows1_2"/>jhjalkj laskjllhsad ljf jlsadjf aljsdf hjalsdjf alsjfd</li>
+				<li><img src="<?php echo $WEB_BASE; ?>data1/images/320x240__banner_26.jpg" alt="320x240 - banner 26" title="320x240 - banner 26" id="wows1_1"/>...</li>
+				<li><img src="<?php echo $WEB_BASE; ?>data1/images/banner_junco_2.jpg" alt="banner_junco_2" title="banner_junco_2" id="wows1_2"/>...</li>
 				<li><img src="<?php echo $WEB_BASE; ?>data1/images/luli_031.jpg" alt="luli 031" title="luli 031" id="wows1_3"/></li>
 				<li><img src="<?php echo $WEB_BASE; ?>data1/images/387442584_a2c6ba1238_z.jpg" alt="387442584_a2c6ba1238_z" title="387442584_a2c6ba1238_z" id="wows1_4"/></li>
 				<li><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto3_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto3_1280" title="tumblr_moguq5kbVk1qaz9lto3_1280" id="wows1_5"/></li>
 				<li><img src="<?php echo $WEB_BASE; ?>data1/images/100_0398.jpg" alt="100_0398" title="100_0398" id="wows1_6"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" title="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" id="wows1_7"/>dflh basdhf lkjhsadlf kjasd flajskdf lasjkdflasdjk asldfjkasldfjka sldfjkas dfkjas df</li>
+				<li><img src="<?php echo $WEB_BASE; ?>data1/images/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" title="chile__420F71_2" id="wows1_7"/>...df</li>
 			</ul>
 		</div>
 		<div class="ws_bullets">
@@ -156,13 +153,13 @@ padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['
 <!-- End WOWSlider.com BODY section -->
 <div class="destacados_wrap" style="background:#736AFF url(<?php echo $WEB_BASE; ?>imagenes/slider/Beach-Background-Wallpaper-Photos.jpg);  position:relative; z-index:2; ">
 	<div id="destacados" class="destacados" style="margin-top:28px; margin-bottom:5px;">
-		<h2 style="margin: 0 0 0 36px;
+		<h2 class="titulo_papel" style="margin: 0 0 0 36px;
 position: absolute;
 text-align: center;
 top: -13px;
 color: black;
 background: white;box-shadow:0 0 4px; 
-padding: 2px 13px 3px 13px;"><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['bienvenido']; ?></h2>
+padding: 2px 13px 3px 13px;"><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['titulo_catalogos']; ?></h2>
 		<div style="text-align:center; position:relative; margin-top:-15px;">
 			<label style="	"><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['mensaje_catalogos']; ?></label>
 		</div>

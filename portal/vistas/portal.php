@@ -1,7 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	 <?php $_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];	 ?>
+	 
 	<title>Souvenir</title>
+	<meta http-equiv="Content-Language" content="es"/>
+	<meta name="google-translate-customization" content="44e65435f1bfea6-01e89e96cf0c3ba5-g93eb31678105cbae-2f"></meta>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Mazatlan recuerdos, joyas" />
 	<meta name="description" content="Mazatlan Souvenir es una tienda de artesania fina" />
@@ -24,7 +28,9 @@
 			color: rgba(0,0,0,0.6);
 			
 		}
-		.articulo p{ text-align:justify; display:inline-block;}
+		.articulo p{ text-align:justify; display:inline-block; -moz-column-count:2; /* Firefox */
+-webkit-column-count:2; /* Safari and Chrome */
+column-count:2;}
 		p{font-family:"arial narrow";  padding:0; margin:0; }
 		h2 a{ text-decoration:none;
 			color: black;			
@@ -44,7 +50,7 @@
 	
     
 </head>
-<body style="">
+<body style="">       
 	<?php
 		
 		 $_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];

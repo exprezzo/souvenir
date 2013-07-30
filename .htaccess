@@ -4,6 +4,8 @@
 	RewriteRule ^$ index.html 
 	RewriteRule ^/$ index.html
 	
+	RewriteRule ^admin$ backend/backend/inicio [L]
+	
 	RewriteRule ^en/pages/home$ en/paginas/inicio [L]
 	RewriteRule ^en/pages/gallery$ en/paginas/galeria [L]
 	RewriteRule ^en/pages/my_mazatlan$ en/paginas/my_mazatlan [L]

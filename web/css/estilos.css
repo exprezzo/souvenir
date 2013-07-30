@@ -23,7 +23,7 @@ body{paddin:0;margin:0; background: black url('http://www.dinpattern.com/tiles/s
 
 .menu{margin:0; padding:0; display:inline-block; }
 .menu li{ display:inline-block; vertical-align:bottom; line-height:100px;}
-.menu a{ color:white; text-decoration:none; font-size:20px; padding-left:20px; padding-right:20px; }
+.menu a{ color:white; text-decoration:none; font-size:20px; padding-left:20px; padding-right:20px; transition:color 2s;}
 .menu a:hover{border-bottom: 4px yellow solid; color:yellow; }
 .menu a.activo{border-bottom: 4px white solid;}
 #footer a{color:white; text-decoration:none;  font-size:.9em}
