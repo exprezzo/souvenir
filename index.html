@@ -2,16 +2,14 @@
 <head>
 	<style>
 		.entrada{
-			/*300 86*/
-			
-			width:300px;
-			height:108px; /* 86 + 12 + 10 */
-			position:absolute; /*El div debe tener la propiedad position distinta de static*/
+			width: 508px;
+			height: 305px;
+			position: absolute;
 			top: 50%;
-			left:50%;
-			margin-top: -84px; /* El valor 200 es ficticio, debes cambiarlo en cada caso por la mitad de la altura de tu imagen*/
-			margin-left: -150px; /* El 200 deberás sustituirlo por la mitad del ancho de la imagen */
-			text-align:center;
+			left: 50%;
+			margin-top: -190px;
+			margin-left: -254px;
+			text-align: center;
 		}
 		
 		
@@ -25,27 +23,49 @@
 			text-decoration:none;
 			margin-top:31px;
 			
-			/*
-			background:white;
 			
-			*/
 			color:white;
 			transition:background-color .5s, color .5s;
 			border-radius:20px;
-			padding:4px 12px 3px 16px;
+			padding:0px 0px 4px 0px;
 			
 		}
-		
-		a:hover{
-			color:#d7a175;
-			background:black;
+		a{					
+			background-image:url(web/imagenes/botones_inicio_sprite.png);
+			background-repeat:no-repeat;
+		}
+		a.esp:hover{
+			background-position-x:-113px;
+		}
+		a.eng{
+			background-position-x:-226px;
+		}
+		a.eng:hover{
+			background-position-x:-340px;
+		}
+		/*
+		a.esp:hover{			
+			background-image:url(web/imagenes/btn_espanol_hover.png);			
 		}
 		
-		a{
-			color:#d7a175;
-			background:white;			
+		a.esp{
+			
+			background:white;	
+			background-image:url(web/imagenes/btn_espanol.png);
+			background-repeat:no-repeat;
 		}
 		
+		a.eng:hover{			
+			background-image:url(web/imagenes/btn_ingles_hover.png);			
+		}
+		
+		a.eng{
+			
+			background:white;	
+			background-image:url(web/imagenes/btn_ingles.png);
+			background-repeat:no-repeat;
+		}
+		*/
 		@-webkit-keyframes myfirst /* Safari and Chrome */
 		{
 			
@@ -86,12 +106,13 @@
 		}
 	</style>
 </head>
-<body style="background:black ;text-align:center; padding:0; margin:0;">
+<body style="background:white ;text-align:center; padding:0; margin:0;">
 	<div style="background:width:100%; height:100%; display: inline-block;">
 		
 		<div class="entrada">
-			<img src='web/imagenes/logo_2.png' style="width:300px; height:86px;"/>
-			<a style="margin-right:30px;" href="es/paginas/inicio">ESPAÑOL    </a><a href="en/pages/home">ENGLISH</a>
+			<img src='web/imagenes/inicio.png' style="width:508; height:152px;"/>
+			<a class="esp" href="es/paginas/inicio" style="width:114px; height:113px; margin-right:30px;">    </a>
+			<a class="eng" href="en/pages/home" style="width:114px; height:113px; "></a>
 		</div>
 	</div>
 </body>

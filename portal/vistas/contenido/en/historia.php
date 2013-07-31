@@ -2,10 +2,11 @@
 	h1, h2{
 		text-align: left;		
 		display: inline-block;
+		font-family:"MarkSans";
 	}
 </style>
-<div style="position:relative; margin-top:0px;  display:inline-block; margin-bottom:20px;">
-	<div class="articulo paper" style="text-align:left;">
+<div style="position:relative; margin-top:30px;  display:inline-block; margin-bottom:20px;">
+	<div class="articulo " style="text-align:left;">
 	
 		<h2 id="comunicado" style="margin: 0 0 0 20px;
 color: black;

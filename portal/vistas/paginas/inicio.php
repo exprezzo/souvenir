@@ -17,16 +17,23 @@
         -webkit-opacity: : 1;
 	}
 	
+	.ws_prev{left: -31px !important;}
+	.ws_next{right: -31px !important;}
 	.destacados_wrap{
 		text-align:center;
 		-webkit-box-shadow: 0 1px 18px rgba(0, 0, 0, 2.3), 0 0 2px rgba(128, 128, 128, 2.1) inset;
 		-moz-box-shadow: 0 1px 18px rgba(0, 0, 0, 2.3), 0 0 2px rgba(128, 128, 128, 2.1) inset;
 		box-shadow: 0 1px 18px rgba(0, 0, 0, 2.3), 0 0 2px rgba(128, 128, 128, 2.1) inset;
 		width:980px; display:inline-block;
-		margin-left:-20px;
+		margin-left:-41px;
+		margin-top:40px;
+		width:1021px;
 	}
 	
-	
+	#wowslider-container1 .ws_bullets {
+		bottom: -50px !important;
+	}
+	.ws_shadow{display:none;}
 	
 	.destacados_wrap:before, .destacados_wrap:after {
 		border-style: solid;
@@ -52,12 +59,13 @@
 		 background:white;		 
 		 display:inline-block;
 		 position:relative;
+		 height:309px;
 	}
 
 	.seccion1{
 		background-image: url(<?php echo $WEB_BASE; ?>imagenes/fondo-banner.png);
 		background-repeat: no-repeat;
-		padding: 22PX 22PX 20PX 21PX;
+		padding: 22PX 22PX 0PX 21PX;
 	}
 	
 	#wowslider-container1{
@@ -116,9 +124,15 @@
 		$("#articulos").carouFredSel();
 	});
 </script>
-<div class="seccion1">
+<div style="text-align:center;">
+<div class="seccion1" style="" >
 	<?php
-		$_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];
+		if ( empty($_GET['idioma_request']) ){			
+			$idioma =substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2); 			
+		}else{
+			$_idioma =  $_GET['idioma_request'];
+		}		
+		if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
 		
 		$Idioma['es']['Paginas']['Inicio']['bienvenido']='Bienvenido';
 		$Idioma['es']['Paginas']['Inicio']['mensaje_catalogos']='Visite nuestro cat&aacute;logo';
@@ -130,27 +144,21 @@
 		$Idioma['en']['Paginas']['Inicio']['titulo_catalogos']='Gallery';
 		
 	?>
-	<h2 class="titulo_papel" style="margin: 0 0 0 20px;
-position: absolute;
-text-align: center;
-top: -33px;
-color: black;
-background: beige;
-padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['bienvenido']; ?></h2>
+	
 	
 	<!-- Start WOWSlider.com BODY section -->
 	
 	<div id="wowslider-container1" style="">
 		<div class="ws_images">
 			<ul>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto2_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto2_1280" title="tumblr_moguq5kbVk1qaz9lto2_1280" id="wows1_0"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/320x240__banner_26.jpg" alt="320x240 - banner 26" title="320x240 - banner 26" id="wows1_1"/>...</li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/banner_junco_2.jpg" alt="banner_junco_2" title="banner_junco_2" id="wows1_2"/>...</li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/luli_031.jpg" alt="luli 031" title="luli 031" id="wows1_3"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/387442584_a2c6ba1238_z.jpg" alt="387442584_a2c6ba1238_z" title="387442584_a2c6ba1238_z" id="wows1_4"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto3_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto3_1280" title="tumblr_moguq5kbVk1qaz9lto3_1280" id="wows1_5"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/100_0398.jpg" alt="100_0398" title="100_0398" id="wows1_6"/></li>
-				<li><img src="<?php echo $WEB_BASE; ?>data1/images/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" title="chile__420F71_2" id="wows1_7"/>...df</li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto2_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto2_1280" title="tumblr_moguq5kbVk1qaz9lto2_1280" id="wows1_0"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/320x240__banner_26.jpg" alt="320x240 - banner 26" title="320x240 - banner 26" id="wows1_1"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/banner_junco_2.jpg" alt="banner_junco_2" title="banner_junco_2" id="wows1_2"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/luli_031.jpg" alt="luli 031" title="luli 031" id="wows1_3"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/387442584_a2c6ba1238_z.jpg" alt="387442584_a2c6ba1238_z" title="387442584_a2c6ba1238_z" id="wows1_4"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto3_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto3_1280" title="tumblr_moguq5kbVk1qaz9lto3_1280" id="wows1_5"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/100_0398.jpg" alt="100_0398" title="100_0398" id="wows1_6"/></a></li>
+				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" title="chile__420F71_2" id="wows1_7"/>...df</a></li>
 			</ul>
 		</div>
 		<div class="ws_bullets">
@@ -169,10 +177,11 @@ padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['
 		<div class="ws_shadow"></div>
 	</div>
 </div>
+</div>
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/wowslider.js"></script>
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/script.js"></script>
 <!-- End WOWSlider.com BODY section -->
-<div class="destacados_wrap" style="background:#736AFF url(<?php echo $WEB_BASE; ?>imagenes/slider/Beach-Background-Wallpaper-Photos.jpg);  position:relative; z-index:2; background-position:5px 270px; text-align:center;">
+<div class="destacados_wrap" style="display:none; background:#736AFF url(<?php echo $WEB_BASE; ?>imagenes/slider/Beach-Background-Wallpaper-Photos.jpg);  position:relative; z-index:2; background-position:5px 270px; text-align:center;">
 	<div id="destacados" class="destacados" style="margin-top:28px; margin-bottom:5px;">
 		<h2 class="titulo_papel" style="margin: 0 0 0 36px;
 position: absolute;
@@ -182,7 +191,7 @@ color: black;
 background: white;box-shadow:0 0 4px; 
 padding: 2px 13px 3px 13px;"><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['titulo_catalogos']; ?></h2>
 		<div style="text-align:center; position:relative; margin-top:-15px;">
-			<label style="	"><?php echo $Idioma[$_idioma]['Paginas']['Inicio']['mensaje_catalogos']; ?></label>
+			
 		</div>
 		<div>
 		<div id="articulos">
