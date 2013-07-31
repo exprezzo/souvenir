@@ -16,6 +16,7 @@
 	RewriteRule ^en/products/ethnic$ en/productos/etnico [L]
 	RewriteRule ^en/products/beach$ en/productos/playa [L]
 	RewriteRule ^en/products/food$ en/productos/food [L]
+	RewriteRule ^en/portal/products/view/(.*)$ en/portal/productos/ver/$1 [L]
 	
 	
 	RewriteRule ^en/(.*)$ core/entrada.php/$1?idioma_request=en [L]

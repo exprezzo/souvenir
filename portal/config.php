@@ -1,5 +1,6 @@
 <?php
-$_LOGIN_REDIRECT_PATH='/souvenir/admin';
+
+$_LOGIN_REDIRECT_PATH='admin';
 
 $DB_CONFIG=array(
 	'DB_SERVER'	=>'localhost',

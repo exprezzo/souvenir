@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2013-07-29 21:58:33
+Date: 2013-07-30 17:10:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,15 +28,16 @@ CREATE TABLE `portal_categoria_producto` (
   `descripcion_en` text,
   `orden` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of portal_categoria_producto
 -- ----------------------------
-INSERT INTO `portal_categoria_producto` VALUES ('1', 'Souvenir', '', 'Arte local', 'Souvenir', 'Local art', null);
-INSERT INTO `portal_categoria_producto` VALUES ('2', 'Etnico', '', 'arte etnico', 'Ethnic', 'Ethnic Art', '0');
-INSERT INTO `portal_categoria_producto` VALUES ('3', 'Playa', '', 'articulos de playa', 'Beach', 'beach items', '0');
-INSERT INTO `portal_categoria_producto` VALUES ('4', 'Food Miles', '', 'Food Miles', 'Food Miles', 'Food Miles', '0');
+INSERT INTO `portal_categoria_producto` VALUES ('1', 'Souvenir', 'souvenir.jpg', 'Arte local', 'Souvenir', 'Local art', '1');
+INSERT INTO `portal_categoria_producto` VALUES ('2', 'Etnico', 'etnico.jpg', 'arte etnico creado por artistas regionales', 'Ethnic', 'arte creado con el sabor de la cultura regional', '2');
+INSERT INTO `portal_categoria_producto` VALUES ('3', 'Playa', 'playa.jpg', 'articulos de playa', 'Beach', 'if you need clothes to go to the beach or pool this is the section you need', '3');
+INSERT INTO `portal_categoria_producto` VALUES ('4', 'Food Miles', 'Miles.jpg', 'Food Miles', 'Food Miles', 'Food Miles', '4');
+INSERT INTO `portal_categoria_producto` VALUES ('5', 'Joyeria', 'Joyeria.jpg', 'Joyeria', 'jewelry', 'jewelry', '5');
 
 -- ----------------------------
 -- Table structure for `portal_imagen_producto`
@@ -75,6 +76,7 @@ CREATE TABLE `portal_producto` (
   `descripcion_en` text,
   `orden` int(11) DEFAULT NULL,
   `precio_en` char(50) DEFAULT NULL,
+  `fk_categoria` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `codigo` (`codigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -82,7 +84,11 @@ CREATE TABLE `portal_producto` (
 -- ----------------------------
 -- Records of portal_producto
 -- ----------------------------
-INSERT INTO `portal_producto` VALUES ('1', '001', 'Un Nombre', 'Una descripcion', '0', '', 'A Name', 'The description', '0', null);
+INSERT INTO `portal_producto` VALUES ('1', '001', 'bikini', 'especial para uso en playa y alberca', '$1.00', '', 'bikini', 'if you need clothes to go to the beach or pool this is the section you need', '0', '1', '3');
+INSERT INTO `portal_producto` VALUES ('2', '002', 'p2', 'd2', '$2.00', '', 'p2', 'd2', '0', '2', '1');
+INSERT INTO `portal_producto` VALUES ('3', '003', 'p3', 'd3', '$3.00', '', 'p3', 'd3', '0', '3', '2');
+INSERT INTO `portal_producto` VALUES ('4', '004', 'p4', 'd4', '$4.00', '', 'p4', 'd4', '0', '4', '4');
+INSERT INTO `portal_producto` VALUES ('5', '005', 'toalla', 'toalla para playa, no se le pega el arena', '$5.00', '', 'towel', 'towel', '0', '5', '3');
 
 -- ----------------------------
 -- Table structure for `system_catalogos`
@@ -192,7 +198,7 @@ CREATE TABLE `system_users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nick` (`nick`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of system_users

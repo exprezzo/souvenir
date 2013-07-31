@@ -1,5 +1,6 @@
 <?php		
 	 $_idioma = ( empty($_GET['idioma_request']) )? 'es' : $_GET['idioma_request'];	
+	$sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	
 	$pagina['en']=array(
 		'titulo'	=>'Product Catalog',
@@ -11,45 +12,44 @@
 		'contenido'	=>''
 	);
 	
-	$categorias['es']=array(
-		array(
-			'titulo'=>'Souvenirs',
-			'link'	=>'productos/souvenirs'
-		),array(
-			'titulo'=>'Etnico',
-			'link'	=>'productos/etnico'
-		),array(
-			'titulo'=>'Playa',
-			'link'	=>'productos/playa'
-		),array(
-			'titulo'=>'Food Miles',
-			'link'	=>'productos/food'
-		)
-	);
 	
-	$categorias['en']=array(
-		array(
-			'titulo'=>'Souvenirs',
-			'link'	=>'products/souvenirs'
-		),array(
-			'titulo'=>'Ethnic',
-			'link'	=>'products/ethnic'
-		),array(
-			'titulo'=>'Beach',
-			'link'	=>'products/beach'
-		),array(
-			'titulo'=>'Food Miles',
-			'link'	=>'products/food'
-		)
-	);
 	
 	
 ?>
+<style>
+	.categorias li{list-style:none; display:inline-block; vertical-align:top; margin-bottom:40px;}
+	.categorias h2{margin:0; text-align:center; text-decoration:none; margin-bottom:10px;}
+	.categorias p{  width:260px; }
+	.categorias a{text-decoration:none; color:black;}
+	
+	.categorias li a img, .categorias li a span{vertical-align:middle;}
+</style>
 <h1><?php echo $pagina[$_idioma]['titulo']; ?> </h1>
-<ul>
+
+<ul class="categorias">
 	<?php 
-		foreach($categorias[$_idioma] as $categoria){
-			echo '<li><a href="'.$APP_PATH.$_idioma.'/'.$categoria['link'] .'">'.$categoria['titulo'].'</a></li>';
+		foreach($this->categorias as $categoria){
+			// $link=
+			$titulo=$categoria['nombre'.$sufijo];
+			$descripcion=$categoria['descripcion'.$sufijo];
+			$imagen=(empty($categoria['imagen']) )?  $WEB_BASE.'imagenes/no-image.jpg' : $WEB_BASE.'imagenes/categorias/'.$categoria['imagen'];
+			
+			if ($_idioma=='en'){
+				$target=$APP_PATH.$_idioma.'/portal/products/view/'.$categoria['id'].'/'.str_replace(' ','_',$titulo);
+			}else{
+				$target=$APP_PATH.$_idioma.'/portal/productos/ver/'.$categoria['id'].'/'.str_replace(' ','_',$titulo);
+			}						
+			
+			?>
+			<li><a href="<?php echo $target; ?>">
+					<div>
+						<h2><?php echo $titulo; ?></h2>
+						<img width="100" height="100" style="float:left;" src="<?php echo $imagen; ?>" />
+						<p><?php echo $descripcion; ?></p>
+					</div>
+				</a>
+			</li>
+			<?php
 		}
 	?>	
 </ul>

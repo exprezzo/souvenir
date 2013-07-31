@@ -62,6 +62,10 @@
 	<input type="text" name="nombre" class="txt_nombre" value="<?php echo $this->datos['nombre']; ?>" style="width:500px;" />
 </div>
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+	<label style="">Categoria:</label>
+	<input type="text" name="fk_categoria" class="txt_fk_categoria" value="<?php echo $this->datos['fk_categoria']; ?>" style="width:500px;" />
+</div>
+<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Descripcion:</label>
 	<input type="text" name="descripcion" class="txt_descripcion" value="<?php echo $this->datos['descripcion']; ?>" style="width:500px;" />
 </div>
@@ -76,6 +80,10 @@
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Nombre_en:</label>
 	<input type="text" name="nombre_en" class="txt_nombre_en" value="<?php echo $this->datos['nombre_en']; ?>" style="width:500px;" />
+</div>
+<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+	<label style="">Precio_en:</label>
+	<input type="text" name="precio_en" class="txt_precio_en" value="<?php echo $this->datos['precio_en']; ?>" style="width:500px;" />
 </div>
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Descripcion_en:</label>

@@ -2,6 +2,21 @@
 	.destacados {text-align:left;  display:inline-block;}
 	.destacados .elemento{width:100px; height:100px;  border-radius:13px; margin:10px; display:inline-block; overflow:hidden;}
 	.destacados .elemento img{width:100px; height:100px;}
+	
+	.elemento{
+		opacity:.3;
+		-moz-opacity: .3;
+        -khtml-opacity: .3;
+        -webkit-opacity: : .3;
+	}
+	
+	.elemento:hover{
+		opacity:1;
+		-moz-opacity: 1;
+        -khtml-opacity: 1;
+        -webkit-opacity: : 1;
+	}
+	
 	.destacados_wrap{
 		text-align:center;
 		-webkit-box-shadow: 0 1px 18px rgba(0, 0, 0, 2.3), 0 0 2px rgba(128, 128, 128, 2.1) inset;
@@ -11,38 +26,44 @@
 		margin-left:-20px;
 	}
 	
+	
+	
 	.destacados_wrap:before, .destacados_wrap:after {
-border-style: solid;
-border-color: transparent;
-bottom: -10px;
-	content:"";
-				
+		border-style: solid;
+		border-color: transparent;
+		bottom: -10px;
+		content:"";			
 		position:absolute;
-}
+	}
 
-.destacados_wrap:before {
-border-width: 0 20px 10px 0;
-border-right-color: #0B0B3B; /* Color de la sombra del doblez */
-left: 0;
-}
+	.destacados_wrap:before {
+		border-width: 0 20px 10px 0;
+		border-right-color: #0B0B3B; /* Color de la sombra del doblez */
+		left: 0;
+	}
 
-.destacados_wrap:after {
-	border-width: 0 0 10px 20px;
-	border-left-color: #0B0B3B; /* Color de la sombra del doblez */
-	right: 0;
-} 
+	.destacados_wrap:after {
+		border-width: 0 0 10px 20px;
+		border-left-color: #0B0B3B; /* Color de la sombra del doblez */
+		right: 0;
+	} 
 	.seccion1{		 
 		 padding:0px;		 
 		 background:white;		 
 		 display:inline-block;
 		 position:relative;
 	}
-	
+
+	.seccion1{
+		background-image: url(<?php echo $WEB_BASE; ?>imagenes/fondo-banner.png);
+		background-repeat: no-repeat;
+		padding: 22PX 22PX 20PX 21PX;
+	}
 	
 	#wowslider-container1{
-		border-radius: 9px;
+		/* border-radius: 9px;
 		border: 2px white solid;
-		margin:10px 0 40px 0;
+		margin:10px 0 40px 0; */
 	}
 	.ws_images{
 		border-radius: 9px;		
@@ -151,7 +172,7 @@ padding: 2px 13px 3px 13px; box-shadow:0 0 4px; "><?php echo $Idioma[$_idioma]['
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/wowslider.js"></script>
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/script.js"></script>
 <!-- End WOWSlider.com BODY section -->
-<div class="destacados_wrap" style="background:#736AFF url(<?php echo $WEB_BASE; ?>imagenes/slider/Beach-Background-Wallpaper-Photos.jpg);  position:relative; z-index:2; ">
+<div class="destacados_wrap" style="background:#736AFF url(<?php echo $WEB_BASE; ?>imagenes/slider/Beach-Background-Wallpaper-Photos.jpg);  position:relative; z-index:2; background-position:5px 270px; text-align:center;">
 	<div id="destacados" class="destacados" style="margin-top:28px; margin-bottom:5px;">
 		<h2 class="titulo_papel" style="margin: 0 0 0 36px;
 position: absolute;
