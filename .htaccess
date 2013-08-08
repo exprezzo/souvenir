@@ -11,6 +11,7 @@
 	RewriteRule ^en/pages/my_mazatlan$ en/paginas/my_mazatlan [L]
 	RewriteRule ^en/pages/history$ en/paginas/historia [L]
 	RewriteRule ^en/pages/contact$ en/paginas/contacto [L]
+	RewriteRule ^en/pages/location$ en/paginas/ubicacion [L]
 	
 	RewriteRule ^en/products/souvenirs$ en/productos/souvenirs [L]
 	RewriteRule ^en/products/ethnic$ en/productos/etnico [L]

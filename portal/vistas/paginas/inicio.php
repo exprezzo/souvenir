@@ -128,11 +128,14 @@
 <div class="seccion1" style="" >
 	<?php
 		if ( empty($_GET['idioma_request']) ){			
-			$idioma =substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2); 			
+			$_idioma =substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2); 			
 		}else{
 			$_idioma =  $_GET['idioma_request'];
 		}		
 		if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
+		
+		
+		$sufijo= ( $_idioma=='es' )? '' : '_'.$_idioma;
 		
 		$Idioma['es']['Paginas']['Inicio']['bienvenido']='Bienvenido';
 		$Idioma['es']['Paginas']['Inicio']['mensaje_catalogos']='Visite nuestro cat&aacute;logo';
@@ -143,36 +146,220 @@
 		$Idioma['en']['Paginas']['Inicio']['mensaje_catalogos']='See our products';
 		$Idioma['en']['Paginas']['Inicio']['titulo_catalogos']='Gallery';
 		
+		$paginas=array();
+		
+	
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_riv_nay_el_arte_huichol_ex_artehuichol.jpg',
+			'thumb'=>'data1/tooltips/photoescudo_riv_nay_el_arte_huichol_ex_artehuichol.jpg',
+			'ruta'=>'portal/productos/ver/3/Playa',			
+			'titulo'=>'My Mazatlan Souvenirs',			
+			'descripcion'=>'Nacida en el puerto de mazatlan desde hace tiempo comparte el sabor de la vida sinaloense.',
+			'ruta_en'=>'portal/products/view/3/Beach',			
+			'titulo_en'=>'My Mazatlan Souvenirs',
+			'descripcion_en'=>'Born in the port of mazatlan time shares for the taste of life Sinaloa'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/artesanas.jpg',
+			'thumb'=>'data1/images/artesanas.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'My Mazatlan Souvenirs',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'My Mazatlan Souvenirs',
+			'descripcion_en'=>'...'
+		);
+		
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/macetasdetalaveraflowerspots.jpg',
+			'thumb'=>'data1/images/macetasdetalaveraflowerspots.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_zac_centro_platero_de_zacatecas_ac_artesanias.jpg',
+			'thumb'=>'data1/images/photoescudo_zac_centro_platero_de_zacatecas_ac_artesanias.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/artesaniaszacatecas1.jpg',
+			'thumb'=>'data1/images/artesaniaszacatecas1.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoimage_back_artesanias_3_artesaniaguerrero.jpg',
+			'thumb'=>'data1/images/photoimage_back_artesanias_3_artesaniaguerrero.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/artesanias.jpg',
+			'thumb'=>'data1/images/artesanias.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/artesaniasguerreroartesanos.jpg',
+			'thumb'=>'data1/images/artesaniasguerreroartesanos.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/descarga.jpg',
+			'thumb'=>'data1/images/descarga.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/huichol.jpg',
+			'thumb'=>'data1/images/huichol.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/images.jpg',
+			'thumb'=>'data1/images/images.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_hdgo_artesanias_ac_hidalgoartesania.jpg',
+			'thumb'=>'data1/images/photoescudo_hdgo_artesanias_ac_hidalgoartesania.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_artesanias_artesanias.jpg',
+			'thumb'=>'data1/images/photoescudo_artesanias_artesanias.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_col_artesanias_ac_colimaartesania.jpg',
+			'thumb'=>'data1/images/photoescudo_col_artesanias_ac_colimaartesania.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/photoescudo_col_artesanias_ac_colimaartesania.jpg',
+			'thumb'=>'data1/images/photoescudo_col_artesanias_ac_colimaartesania.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);		
+		
+		$paginas[]=array(
+			'imagen'=>'data1/images/fullarte_huichol.jpg',
+			'thumb'=>'data1/images/fullarte_huichol.jpg',
+			'ruta'=>'paginas/historia',			
+			'titulo'=>'...',			
+			'descripcion'=>'...',
+			'ruta_en'=>'pages/history',			
+			'titulo_en'=>'...',
+			'descripcion_en'=>'...'
+		);
+		
+		
+		
 	?>
 	
 	
 	<!-- Start WOWSlider.com BODY section -->
 	
 	<div id="wowslider-container1" style="">
-		<div class="ws_images">
-			<ul>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto2_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto2_1280" title="tumblr_moguq5kbVk1qaz9lto2_1280" id="wows1_0"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/320x240__banner_26.jpg" alt="320x240 - banner 26" title="320x240 - banner 26" id="wows1_1"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/banner_junco_2.jpg" alt="banner_junco_2" title="banner_junco_2" id="wows1_2"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/luli_031.jpg" alt="luli 031" title="luli 031" id="wows1_3"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/387442584_a2c6ba1238_z.jpg" alt="387442584_a2c6ba1238_z" title="387442584_a2c6ba1238_z" id="wows1_4"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/tumblr_moguq5kbvk1qaz9lto3_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto3_1280" title="tumblr_moguq5kbVk1qaz9lto3_1280" id="wows1_5"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/100_0398.jpg" alt="100_0398" title="100_0398" id="wows1_6"/></a></li>
-				<li><a href="<?php echo $_APP_PATH; ?>paginas/historia"><img src="<?php echo $WEB_BASE; ?>data1/images/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2" title="chile__420F71_2" id="wows1_7"/>...df</a></li>
+		<div class="ws_images"><ul>
+			<?php
+				$numero=1;
+				foreach($paginas as $page){
+				?>
+					<li><a href="<?php echo $_APP_PATH.$_idioma.'/'.$page['ruta'.$sufijo]; ?>"><img src="<?php echo $WEB_BASE.$page['imagen']; ?>" alt="<?php echo $page['titulo'.$sufijo]; ?>" title="<?php echo $page['titulo'.$sufijo]; ?>" id="wows1_<?php echo $numero; ?>"/></a><?php echo $page['descripcion'.$sufijo]; ?></li>
+				<?php
+					$numero++;
+				}
+			?>			
 			</ul>
 		</div>
-		<div class="ws_bullets">
-			<div>
-				<a href="#" title="tumblr_moguq5kbVk1qaz9lto2_1280"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/tumblr_moguq5kbvk1qaz9lto2_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto2_1280"/>1</a>
-				<a href="#" title="320x240 - banner 26"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/320x240__banner_26.jpg" alt="320x240 - banner 26"/>2</a>
-				<a href="#" title="banner_junco_2"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/banner_junco_2.jpg" alt="banner_junco_2"/>3</a>
-				<a href="#" title="luli 031"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/luli_031.jpg" alt="luli 031"/>4</a>
-				<a href="#" title="387442584_a2c6ba1238_z"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/387442584_a2c6ba1238_z.jpg" alt="387442584_a2c6ba1238_z"/>5</a>
-				<a href="#" title="tumblr_moguq5kbVk1qaz9lto3_1280"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/tumblr_moguq5kbvk1qaz9lto3_1280.jpg" alt="tumblr_moguq5kbVk1qaz9lto3_1280"/>6</a>
-				<a href="#" title="100_0398"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/100_0398.jpg" alt="100_0398"/>7</a>
-				<a href="#" title="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2"><img src="<?php echo $WEB_BASE; ?>data1/tooltips/cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420f71_2.jpg" alt="cuadro+original+artesan+iacute+a+coquimbo+coquimbo+chile__420F71_2"/>8</a>
-			</div>
-		</div>
+		<div class="ws_bullets"><div>
+			<?php
+				$numero=1;;
+				foreach($paginas as $page){
+				?>					
+					<a href="#" title="<?php echo $page['titulo'.$sufijo]; ?>"><img src="<?php echo $WEB_BASE.$page['thumb']; ?>" alt="<?php echo $page['titulo'.$sufijo]; ?>"/>$numero</a>
+				<?php
+					$numero++;
+				}
+			?>			
+			
+			
+			</div></div>
 		<span class="wsl"><a href="http://wowslider.com">Responsive Carousel</a> by WOWSlider.com v4.2</span>
 		<div class="ws_shadow"></div>
 	</div>
