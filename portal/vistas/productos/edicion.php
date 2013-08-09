@@ -1,7 +1,18 @@
 
 <script src="<?php echo $MOD_WEB_PATH; ?>js/catalogos/<?php echo $_PETICION->controlador; ?>/edicion.js"></script>
 <script src="<?php echo $MOD_WEB_PATH; ?>js/catalogos/<?php echo $_PETICION->controlador; ?>/imagenes_producto.js"></script>
-
+<style>
+	.imagenes_carpeta{
+		display:inline-block;vertical-align:top;
+		width:450px;height:450px; overflow:auto;
+		
+	}
+	.imagenes_carpeta img{margin:5px; border:transparent 2px solid; }
+	.imagenes_carpeta img.seleccionado{ border:blue 2px solid;}
+	
+	.selector_imagenes  .wijmo-wijtree {display:inline-block;}
+	.wijmo-wijdialog-titlebar-close{position:relative;}
+</style>
 <script>			
 	$( function(){		
 		var config={
@@ -35,6 +46,58 @@
 		 };
 		 var detalle=new ImagenesProducto();
 		 detalle.init(paramsDetalle);
+		 
+		 $.wijmo.wijtreenode.prototype.options.expanded = true;
+		 $(tabId + ' .carpetas').wijtree();
+		 
+		 var divImagenes = $(tabId + '  .imagenes_carpeta');
+		 
+		 $(tabId +  ' .carpetas li').bind('click',function(e){
+			e.stopPropagation();
+			var ruta =$(this).attr('ruta') + $(this).attr('texto');  
+			
+			$(divImagenes).empty();
+			
+			$.ajax({
+			  type: "POST",
+			  url: kore.url_base+'portal/productos/obtenerImagenes',
+			  data: { ruta: ruta }
+			}).done(function( respuesta ) {
+				var res = eval( '(' + respuesta + ')');
+				var imagen='';
+				var url='',ruta="";
+				for (var i=0; i<res.imagenes.length; i++){
+					url=kore.url_base+'web/imagenes/'+res.imagenes[i].base+res.imagenes[i].nombre;
+					ruta=res.imagenes[i].base+res.imagenes[i].nombre;
+					imagen='<img ruta="'+ruta+'" width="100" height="100" src="timthumb.php?src='+url+'&h=150" base="'+res.imagenes[i].base+'" />';
+					// alert(imagen);
+					$(divImagenes).append(imagen);
+					
+					
+				}
+				var imagenes =$(divImagenes).find('img');
+						for(var x=0; x<imagenes.length; x++){
+							// alert("asd");
+							$(imagenes[x]).bind('click',function(){
+								
+								if ( $(this).hasClass("seleccionado") ){
+									$(this).removeClass("seleccionado");
+								}else{
+									$(this).addClass("seleccionado");
+								}
+							});
+						}
+			});
+		 });
+		 
+		  var selector = $(tabId + ' .selector_imagenes').wijdialog({
+               buttons : [],
+			  modal:true,			  
+			  autoOpen:false,
+			  minWidth:900              
+          });
+		  detalle.selector=selector;
+		  // console.log("selector "); console.log(selector );
 	});
 </script>
 
@@ -95,7 +158,41 @@
 </div>
 
 		</form>
-		
+			<div class="selector_imagenes">
+				<div class="header"> 
+					<h2>Explorador de archivos</h2> 
+				</div> 
+				  <div class="main "> 
+			<ul class="carpetas">
+				<li  texto="" ruta="">Imagenes
+		<?php 
+			// print_r( $this->carpetas );
+			
+			imprimir_carpetas($this->carpetas);
+			
+			function imprimir_carpetas($carpetas){
+				if ( empty($carpetas) ) return true;
+				
+				echo '<ul  >';		
+				foreach($carpetas as $carpeta){
+					echo '<li texto="'.$carpeta['nombre'].'" ruta="'.$carpeta['ruta'].'" >'.$carpeta['nombre'];					
+					if ( !empty($carpeta['subcarpetas']) ){
+						imprimir_carpetas($carpeta['subcarpetas']); 
+					}
+					echo '</li>';
+				}
+				echo '</ul>';
+			}
+		?>
+			</li>
+		</ul>
+		<div class="imagenes_carpeta">
+			
+		</div>
+			<input type="button" value="Aceptar" /> 
+			
+		</div>
+		</div>
 		<div class="imagenes" style="width:754px;">
 			<div class="toolbarDetalles" style="padding:none; margin-bottom:5px; ">
 				<button class="btnAgregar" style="padding:none;"></button><h2 style="display: inline-block;padding: 0 0 0 10px;margin: 0;">Imagenes</h2><h2 class=""></h2>

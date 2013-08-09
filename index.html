@@ -1,119 +1,76 @@
 <html>
 <head>
-	<style>
-		.entrada{
-			width: 508px;
-			height: 305px;
+	<link rel="stylesheet" type="text/css" href="web/css/reset.css" />
+<style>
+	
+	
+	
+	#cenefa_header{
+		background-repeat: repeat-x; 
+		background-image:url('web/imagenes/patron_header.png');		
+		width:100%;
+		height:28px; margin-bottom: -2px;
+	}
+	
+	
+	#contenido{				
+		width:100%;
+		background-repeat:no-repeat;			
+		background-size:25%;
+		position:relative;
+		height:100%;
+		margin-top: -170px
+	}
+	
+	.centro{
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		margin-left: -156px;
+		width: 312px;
+		top:50%;
+		
+		
+	}
+	#fondo {
+			background-image: url('web/imagenes/esq_inf_izq.png' ), url('web/imagenes/background.jpg' );
+			height: 100%;
+			top: -61px;
+			width: 100%;
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-top: -190px;
-			margin-left: -254px;
-			text-align: center;
-		}
-		
-		
-		a{
-			font-family:'Arial, Helvetica, sans-serif';
-			text-align:center;
-			
-			font-size:12px;
-			color:black;
-			display:inline-block;
-			text-decoration:none;
-			margin-top:31px;
-			
-			
-			color:white;
-			transition:background-color .5s, color .5s;
-			border-radius:20px;
-			padding:0px 0px 4px 0px;
-			
-		}
-		a{					
-			background-image:url(web/imagenes/botones_inicio_sprite.png);
-			background-repeat:no-repeat;
-		}
-		a.esp:hover{
-			background-position-x:-113px;
-		}
-		a.eng{
-			background-position-x:-226px;
-		}
-		a.eng:hover{
-			background-position-x:-340px;
-		}
-		/*
-		a.esp:hover{			
-			background-image:url(web/imagenes/btn_espanol_hover.png);			
-		}
-		
-		a.esp{
-			
-			background:white;	
-			background-image:url(web/imagenes/btn_espanol.png);
-			background-repeat:no-repeat;
-		}
-		
-		a.eng:hover{			
-			background-image:url(web/imagenes/btn_ingles_hover.png);			
-		}
-		
-		a.eng{
-			
-			background:white;	
-			background-image:url(web/imagenes/btn_ingles.png);
-			background-repeat:no-repeat;
-		}
-		*/
-		@-webkit-keyframes myfirst /* Safari and Chrome */
-		{
-			
-			0%   {0pacity: .1; -moz-opacity:0.1;}
-			20%  {opacity: 1; background:black; -moz-opacity:1; }
-			22%  {opacity: .1; -moz-opacity:0.1; }
-			24%  {opacity: 1; background:greenyellow; -moz-opacity:1;}
-			40%  {opacity: 1; background:greenyellow; }
-			42%  {opacity: .1; -moz-opacity:0.1;}
-			45%  {opacity: 1;  background:red; -moz-opacity:1;}
-			60%  {opacity: 1;  background:red;}
-			62%  {opacity: .1; -moz-opacity:0.1;}
-			64%  {opacity: 1; background: white; -moz-opacity:1;}
-			80%  {opacity: 1; background: white; }			
-			100%  {opacity: .5; background: #E0ECF8; -moz-opacity:0.5;}			
-		}
-		body:after{
-			 /* animation: myfirst 15s;
-			-webkit-animation: myfirst 15s; 
-			-moz-animation-name:myfirst;
-			-moz-animation-duration::15s; */
-			position:relative; height:100%; margin: 0;padding: 0;
-		}
-		.entrada{z-index: 0;}
-		.entrada:after{			
-			padding: 48px;
-			border-radius: 23px;
-			position: absolute;
-			opacity: .9;
-			content: "";
-			width: 300px;
-			height: 108px;
-			left: 100%;
-			margin-left: -344px;
-			margin-top: -131px;
-			z-index: -1;
-		 
-		}
-	</style>
+			background-size: 25%, 100% 100%;
+			background-position: bottom left, top;
+			background-repeat: no-repeat, repeat-x;
+			z-index: -1			
+	}
+	#footer{
+		background-repeat: repeat-x; height: 64px;		
+		background-image:url('web/imagenes/cenefa_inf.png' );
+		width:100%;
+		background-color:#ff9737;
+		position:absolute; bottom: 0;
+	}
+</style>
+
+
+
 </head>
-<body style="background:white ;text-align:center; padding:0; margin:0;">
-	<div style="background:width:100%; height:100%; display: inline-block;">
+
+<body>
+	<div id="portal" >
+		<div id="fondo"></div>		
+		<div id="cenefa_header"></div>
 		
-		<div class="entrada">
-			<img src='web/imagenes/inicio.png' style="width:508; height:152px;"/>
-			<a class="esp" href="es/paginas/inicio" style="width:114px; height:113px; margin-right:30px;">    </a>
-			<a class="eng" href="en/pages/home" style="width:114px; height:113px; "></a>
+		<div id="contenido">
+			<div class="centro" style="display:inline-block; position:relative; left:50%; margin-left: -156px; ">
+				<img  src="web/imagenes/logo_intro.png" width="312" height="108" alt="My Mazatlan Souvenir"/>
+				<h1 style="color:white; text-align: center; font-family:'Tahoma'">SITIO EN CONSTRUCCION</h1>
+			</div>
+		</div>
+		<div id="footer">
+			FOOTER
 		</div>
 	</div>
 </body>
-</html>
+<body>
+<html>

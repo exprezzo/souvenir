@@ -68,6 +68,7 @@ class productos extends Controlador{
 	
 	function ver(){
 		global $_PETICION;
+		$vista=$this->getVista();
 		
 		if (empty ($_PETICION->params) ){
 			$id=0;
@@ -75,23 +76,30 @@ class productos extends Controlador{
 			$id=$_PETICION->params[0];
 		}
 		// echo $id; exit;
+		$mod=new categoria_productoModelo( );		
+		$params=array(
+			'filtros'=>array(
+				array('dataKey'=>'id', 'filterOperator'=>'equals','filterValue'=>$id)
+			)
+		);
 		
-		$mod=$this->getModelo();
+		$cat = $mod->buscar( $params );
+		$vista->categoriaActual=$cat['datos'][0];
 		
+		$cats=$mod->buscar( array() );		
+		$vista->categorias=$cats['datos'];
+		
+		
+		$mod=$this->getModelo();		
 		$params=array(
 			'filtros'=>array(
 				array('dataKey'=>'fk_categoria', 'filterOperator'=>'equals','filterValue'=>$id)
 			)
-		);
-		
-		$resProds = $mod->buscar( $params );
-		
-		$vista=$this->getVista();
+		);		
+		$resProds = $mod->buscar( $params );				
 		$vista->productos=$resProds['datos'];
 		
-		$mod=new categoria_productoModelo( );		
-		$cats=$mod->buscar( array() );		
-		$vista->categorias=$cats['datos'];
+		
 		
 		$this->mostrarVista();
 		
@@ -100,7 +108,10 @@ class productos extends Controlador{
 	function editar(){
 		$vista=$this->getVIsta();
 		
+		
+		
 		$mod = new imagen_productoModelo();
+		$vista->carpetas = $this->obtenerCarpetas('../web/imagenes'); //Ejecuto desde el directorio actual
 		
 		$fk_producto=$_REQUEST['id'];
 		$params=array(
@@ -108,12 +119,76 @@ class productos extends Controlador{
 				array('dataKey'=>'fk_producto', 'filterOperator'=>'equals','filterValue'=>$fk_producto)
 			)
 		);
-		$imagenes = $mod->buscar($params);		
+		$imagenes = $mod->buscar($params);
+		
 		// print_r( $imagenes['datos']);
 		$vista->imagenes=$imagenes['datos'];
 		
 		return parent::editar();
 	}
+	
+	function obtenerImagenes(){		
+		
+		$ruta = str_replace('.','',$_POST['ruta']);		
+		$imagenes = $this->buscarImagenes('../web/imagenes'. $ruta,$ruta );
+		$res=array(
+			'success'=>true,
+			'imagenes'=>$imagenes
+		);
+		echo json_encode($res);
+		
+	}
+	
+	function buscarImagenes($dir,$base) {
+		$imagenes=array();
+		
+			$contenido = scandir($dir);
+			
+			
+			foreach($contenido as $ar){
+				if(is_dir($dir.'/'.$ar) || $ar == '.'  || $ar == '..') { //si es un directorio..
+					
+				}else{
+					// echo $ar; exit;
+					$ext = substr($ar,-4, 4);
+					
+					if ( $ext == '.jpg' || $ext == 'jpeg' || $ext == '.gif' || $ext == '.png'  ){
+						$imagenes[] = array('nombre'=>utf8_decode($ar), 'base'=>$base.'/');
+					}
+				}
+			}
+		
+			
+		
+		return $imagenes;
+	}
+	
+	function obtenerCarpetas($dir, $ruta2='/') {
+		$carpetas=array();
+		
+			$contenido = scandir($dir);
+			
+			// print_r($directories);
+			foreach($contenido as $ar){
+				if(is_dir($dir.'/'.$ar) && $ar != '.'  && $ar != '..') { //si es un directorio..
+					// echo $ar; exit;
+					$carpeta=array();
+					$carpeta['nombre'] = utf8_encode($ar);
+					$carpeta['ruta'] = $ruta2;
+					
+					$carpeta['subcarpetas']=$this->obtenerCarpetas( $dir.'/'.$ar, $ruta2.$ar.'/' ); //recursivamente lo inspecciono tambien					
+					$carpetas[] = $carpeta;
+				}else{
+					 // echo $ar;
+				}
+			}
+		
+			
+		
+		return $carpetas;
+	}
+	
+	
 	function buscar(){
 		return parent::buscar();
 	}

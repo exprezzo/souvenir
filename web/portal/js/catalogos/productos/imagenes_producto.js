@@ -269,7 +269,8 @@ var ImagenesProducto=function (tabId){
 	
 	
 	
-	this.nuevo=function(){	
+	this.nuevo=function(imagen){	
+		alert(imagen);
 		this.padre.editado=true;
 		var rec={};
 		$.each( this.fields, function(indexInArray, valueOfElement){
@@ -284,6 +285,7 @@ var ImagenesProducto=function (tabId){
 		var data= $(tabId+" .grid_articulos").wijgrid('data');									
 		this.tmp_id++;
 		nuevo[0].tmp_id=this.tmp_id;
+		nuevo[0].imagen=imagen;
 		var array3 = nuevo.concat(data); // Merges both arrays
 		data.length=0;
 		for(var i=0; i<array3.length; i++){
@@ -293,18 +295,38 @@ var ImagenesProducto=function (tabId){
 		$(tabId+" .grid_articulos").wijgrid("ensureControl", true);
 		$(tabId+" .grid_articulos").wijgrid('option','pageIndex',0);			 
 		nuevo = $(tabId+" .grid_articulos").wijgrid("currentCell", 0, 0);
-		$(tabId+" .grid_articulos").wijgrid("beginEdit");		
+		// $(tabId+" .grid_articulos").wijgrid("beginEdit");		
 	};
 	
 	
 	
+	this.seleccionarImagenes=function(){
+		// alert("ea, seleccionar imagenes");
+		var imagenes = this.selector.find('img.seleccionado');
+		// console.log("seleccionadas"); console.log(imagenes); 
+		var ruta="";
+		for(var i=0; i<imagenes.length; i++){
+			ruta = $(imagenes[i]).attr('ruta');
+			this.nuevo(ruta);
+		}
+		$(this.selector).wijdialog('close');
+	}
 	this.configurarToolbar=function(tabId){
 		var me=this;				
 		
 		$( me.tabId +  " .btnAgregar" )
 			  .button()
 			  .click(function( event ) {
-					me.nuevo();			
+					// me.nuevo();			
+					var boton=$(me.selector).find('input[type="button"]');
+					$(boton).click(function(){						
+						me.seleccionarImagenes();
+					});
+					$(me.selector).wijdialog('open');
+					// me.selector.listener=me;
+					
+					
+					
 			  });
 	}
 }

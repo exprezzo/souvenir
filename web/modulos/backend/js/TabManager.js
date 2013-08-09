@@ -23,7 +23,7 @@ var TabManager={
 		this.refresLayout();
 	},
 	refresLayout:function(){		
-		$('#tabs').height(screen.height);
+		// $('#tabs').height(screen.height);
 	},
 	add:function(url,titulo,id,iconCls){
 		if (titulo == undefined) titulo='Nuevo Tab';
