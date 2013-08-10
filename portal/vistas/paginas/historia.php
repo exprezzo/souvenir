@@ -9,22 +9,23 @@
 	}
 	
 	.publicacion_wrap{
-		position:relative; margin-top:15px; display:inline-block; margin-bottom:20px;
+		 position:relative;  display:inline-block; margin-bottom:20px;
 	}
 	.titulo_publicacion{
+		margin-bottom:10px;
 		color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma';
+		
 	}
 	
 	.contenido_publicacion{
 		text-align:justify;
 		columns:300px 2;
 		-webkit-columns:300px 2; /* Safari and Chrome */
-		-moz-columns:300px 2; /* Firefox */
+		-moz-columns:300px 2; /* Firefox */				
+		color:#2e2e2e;
 	}
 	
-	{
-	
-	}
+	.disquss_wrapper{ width:717px !important; }
 </style>
 
 

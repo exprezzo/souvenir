@@ -105,7 +105,15 @@
 	#wowslider-container1{z-index:1;}
 	
 	.disquss_wrapper{ width:717px !important; }
-	.publicacion_wrap{margin:0;}
+	.publicacion_wrap{width:668px; margin:0;background-image: url(<?php echo $WEB_BASE; ?>imagenes/hojas.png);
+background-size: 100%;
+padding: 17px 25px 25px 25px;
+height: 279px;
+background-repeat: no-repeat;}
+.titulo_publicacion{margin-bottom: 5px; margin-top: 6px; }
+
+.publicacion_wrap{margin-top:15px; }
+.titulo_publicacion{ margin-bottom:0px !important;}
 </style>
 <script>
 	$(function(){

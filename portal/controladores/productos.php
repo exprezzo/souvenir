@@ -80,11 +80,7 @@ class productos extends Controlador{
 			'titulo_en'	=>'Contact',
 			'target'	=>'paginas/contacto'
 		);
-		$menus[]=array(
-			'titulo'	=>'Ubicación',
-			'titulo_en'	=>'Location',
-			'target'	=>'paginas/ubicacion'
-		);
+	
 		
 		return $menus;
 	}

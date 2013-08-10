@@ -44,11 +44,7 @@ class Paginas extends Controlador{
 			'titulo_en'	=>'Contact',
 			'target'	=>'paginas/contacto'
 		);
-		$menus[]=array(
-			'titulo'	=>'Ubicación',
-			'titulo_en'	=>'Location',
-			'target'	=>'paginas/ubicacion'
-		);
+		
 		
 		return $menus;
 	}
@@ -76,7 +72,12 @@ class Paginas extends Controlador{
 	function buscar(){
 		return $this->mostrarVista();
 	}
-	
+	function contacto(){
+		$vista= $this->getVista();
+		$vista->menus = $this->getMenus();
+		$vista->categorias = $this->getCategorias();
+		return $vista->mostrar( '/contacto', true);
+	}
 	function galeria(){
 		$vista=$this->getVista();
 		
