@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2013-07-30 17:10:47
+Date: 2013-08-09 23:09:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,16 +28,17 @@ CREATE TABLE `portal_categoria_producto` (
   `descripcion_en` text,
   `orden` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of portal_categoria_producto
 -- ----------------------------
 INSERT INTO `portal_categoria_producto` VALUES ('1', 'Souvenir', 'souvenir.jpg', 'Arte local', 'Souvenir', 'Local art', '1');
-INSERT INTO `portal_categoria_producto` VALUES ('2', 'Etnico', 'etnico.jpg', 'arte etnico creado por artistas regionales', 'Ethnic', 'arte creado con el sabor de la cultura regional', '2');
+INSERT INTO `portal_categoria_producto` VALUES ('2', 'Etnico', 'etnico.jpg', 'arte etnico creado por artistas regionales', 'Ethnic', 'ethnic art created by regional artists', '2');
 INSERT INTO `portal_categoria_producto` VALUES ('3', 'Playa', 'playa.jpg', 'articulos de playa', 'Beach', 'if you need clothes to go to the beach or pool this is the section you need', '3');
 INSERT INTO `portal_categoria_producto` VALUES ('4', 'Food Miles', 'Miles.jpg', 'Food Miles', 'Food Miles', 'Food Miles', '4');
 INSERT INTO `portal_categoria_producto` VALUES ('5', 'Joyeria', 'Joyeria.jpg', 'Joyeria', 'jewelry', 'jewelry', '5');
+INSERT INTO `portal_categoria_producto` VALUES ('6', 'Otra Categoria', '', 'esta es una descipcion de prueba', 'Another Category', 'This this a description text', '6');
 
 -- ----------------------------
 -- Table structure for `portal_imagen_producto`
@@ -48,18 +49,23 @@ CREATE TABLE `portal_imagen_producto` (
   `fk_producto` int(11) DEFAULT NULL,
   `imagen` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of portal_imagen_producto
 -- ----------------------------
-INSERT INTO `portal_imagen_producto` VALUES ('1', '1', 'imagen');
 INSERT INTO `portal_imagen_producto` VALUES ('3', '2', 'ddd');
 INSERT INTO `portal_imagen_producto` VALUES ('4', '2', 'ddd2');
 INSERT INTO `portal_imagen_producto` VALUES ('13', '2', 'aaax');
 INSERT INTO `portal_imagen_producto` VALUES ('14', '2', 'bbb3');
 INSERT INTO `portal_imagen_producto` VALUES ('15', '2', 'sadfsdfasdf');
-INSERT INTO `portal_imagen_producto` VALUES ('16', '1', 'dd3');
+INSERT INTO `portal_imagen_producto` VALUES ('17', '3', '/articulos/Wedding-favors-six-things-to-look-for-in-your-wedding-favors.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('18', '3', '/articulos/souvenir9.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('19', '3', '/articulos/flip-flop-placecard-holders.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('20', '1', '/slider/artesanias.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('21', '1', '/slider/387442584_a2c6ba1238_z.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('22', '1', '/slider/320x240 - banner 26.jpg');
+INSERT INTO `portal_imagen_producto` VALUES ('23', '1', '/slider/01_129.jpg');
 
 -- ----------------------------
 -- Table structure for `portal_producto`
@@ -79,16 +85,38 @@ CREATE TABLE `portal_producto` (
   `fk_categoria` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `codigo` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of portal_producto
 -- ----------------------------
-INSERT INTO `portal_producto` VALUES ('1', '001', 'bikini', 'especial para uso en playa y alberca', '$1.00', '', 'bikini', 'if you need clothes to go to the beach or pool this is the section you need', '0', '1', '3');
-INSERT INTO `portal_producto` VALUES ('2', '002', 'p2', 'd2', '$2.00', '', 'p2', 'd2', '0', '2', '1');
-INSERT INTO `portal_producto` VALUES ('3', '003', 'p3', 'd3', '$3.00', '', 'p3', 'd3', '0', '3', '2');
-INSERT INTO `portal_producto` VALUES ('4', '004', 'p4', 'd4', '$4.00', '', 'p4', 'd4', '0', '4', '4');
-INSERT INTO `portal_producto` VALUES ('5', '005', 'toalla', 'toalla para playa, no se le pega el arena', '$5.00', '', 'towel', 'towel', '0', '5', '3');
+INSERT INTO `portal_producto` VALUES ('1', '001', 'bikini', 'especial para uso en playa y alberca', '$1.00', '/slider/artesanias.jpg', 'bikini', 'if you need clothes to go to the beach or pool this is the section you need', '0', '1', '1');
+INSERT INTO `portal_producto` VALUES ('2', '002', 'p2', 'd2', '2.00', '/slider/artesanias.jpg', 'p2', 'd2', '0', '2', '1');
+INSERT INTO `portal_producto` VALUES ('3', '003', 'p3', 'd3', '3.00', '/slider/artesanias.jpg', 'p3', 'd3', '0', '3', '1');
+INSERT INTO `portal_producto` VALUES ('4', '004', 'p4', 'd4', '4.00', '/slider/artesanias.jpg', 'p4', 'd4', '0', '4', '1');
+INSERT INTO `portal_producto` VALUES ('5', '005', 'toalla', 'toalla para playa, no se le pega el arena', '5.00', '/slider/artesanias.jpg', 'towel', 'f', '0', '5', '1');
+INSERT INTO `portal_producto` VALUES ('6', '6', 'a', 'fd', '2', '/slider/artesanias.jpg', 'r', 'asd', null, '344', '1');
+INSERT INTO `portal_producto` VALUES ('10', '7', 's', 'sa', '43', '/slider/artesanias.jpg', 'rweq', 'sdf', null, '4', '1');
+INSERT INTO `portal_producto` VALUES ('11', '8', 'd', 'asdf', '45', '/slider/artesanias.jpg', 'wreq', 'dfa', null, '5', '1');
+INSERT INTO `portal_producto` VALUES ('12', '9', 'f', 'asf', '847', '/slider/artesanias.jpg', 'wreq', 'fas', null, '2', '1');
+INSERT INTO `portal_producto` VALUES ('13', '10', 'g', 'asfdas', '48', '/slider/artesanias.jpg', 'qrwe', 'd', null, '2', '2');
+INSERT INTO `portal_producto` VALUES ('14', '11', 'h', 'dfa', '45', '/slider/artesanias.jpg', 'erwq', 'SD', null, '3', '2');
+INSERT INTO `portal_producto` VALUES ('15', '12', 'j', 'sdf', '7', '/slider/artesanias.jpg', 'qrwe', 'DA', null, '67', '2');
+INSERT INTO `portal_producto` VALUES ('16', '13', 'k', 'asf', '56', '/slider/artesanias.jpg', 're', 'FAS', null, '6', '2');
+INSERT INTO `portal_producto` VALUES ('17', '14', 'l', 'sfda', '5', '/slider/artesanias.jpg', 'er', 'ASD', null, '3', '2');
+INSERT INTO `portal_producto` VALUES ('18', '15', 'ñ', 'sfas', '4', '/slider/artesanias.jpg', 'qw', 'SDF', null, '34', '2');
+INSERT INTO `portal_producto` VALUES ('19', '16', 'p', 'df', '43', '/slider/artesanias.jpg', 'qgw', 'WDFA', null, '6', '2');
+INSERT INTO `portal_producto` VALUES ('20', '17', 'o', 'afa', '243', '/slider/artesanias.jpg', 'g', 'F', null, '67', '2');
+INSERT INTO `portal_producto` VALUES ('21', '18', 'i', 'fsdas', '243', '/slider/artesanias.jpg', 'wrreq', 'SD', null, '3', '2');
+INSERT INTO `portal_producto` VALUES ('22', '19', 'y', 'df', '243', '/slider/artesanias.jpg', 'qwe', 'sdf', null, '4', '3');
+INSERT INTO `portal_producto` VALUES ('23', '20', 't', 'asdf', '243', '/slider/artesanias.jpg', 'fq', 'da', null, '5', '3');
+INSERT INTO `portal_producto` VALUES ('24', '21', 'r', 'asd', '234', '/slider/artesanias.jpg', 'wqw', 'vs', null, '7', '3');
+INSERT INTO `portal_producto` VALUES ('25', '22', 'e', 'faa', '243', '/slider/artesanias.jpg', 'fqw', 'sd', null, '635', '3');
+INSERT INTO `portal_producto` VALUES ('26', '23', 'w', 'sd', '3', '/slider/artesanias.jpg', 'eqf', 'raf', null, '4', '3');
+INSERT INTO `portal_producto` VALUES ('27', '24', 'q', 'afsdf', '24', '/slider/artesanias.jpg', 'qwr', 'qw', null, null, '3');
+INSERT INTO `portal_producto` VALUES ('28', '25', 'z', 'a', '234', '/slider/artesanias.jpg', 'qwer', 'rweq', null, '7', '3');
+INSERT INTO `portal_producto` VALUES ('29', '27', 'asdf', 'sfd', '24', '/slider/artesanias.jpg', 'wqer', 'qrwe', null, '8', '3');
+INSERT INTO `portal_producto` VALUES ('30', '28', 'fd', 'asd', '324', '/slider/artesanias.jpg', 'qwer', 'qwre', null, '23', '3');
 
 -- ----------------------------
 -- Table structure for `system_catalogos`
