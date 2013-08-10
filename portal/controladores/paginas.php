@@ -4,7 +4,53 @@ require_once $APPS_PATH.$_PETICION->modulo.'/modelos/categoria_producto_modelo.p
 class Paginas extends Controlador{
 	function mostrarVista($vistaFile=''){
 		$vista= $this->getVista();
-		return $vista->mostrar( '/portal', true);
+		$vista->menus = $this->getMenus();
+		$vista->categorias = $this->getCategorias();
+		return $vista->mostrar( '/tema', true);
+	}
+	
+	private function getCategorias(){
+		
+		$mod	=new categoria_productoModelo( );
+		$cats	=$mod->buscar( array() );
+		return $cats['datos'];
+		
+	}
+	
+	function getMenus(){
+		$menus=array();
+		$menus[]=array(
+			'titulo'	=>'Inicio',
+			'titulo_en'	=>'Home',
+			'target'	=>'paginas/inicio'
+		);
+		$menus[]=array(
+			'titulo'	=>'Galeria',
+			'titulo_en'	=>'Gallery',
+			'target'	=>'paginas/galeria'
+		);
+		$menus[]=array(
+			'titulo'	=>'Mi Mazatlán',
+			'titulo_en'	=>'My Mazatlan',
+			'target'	=>'paginas/my_mazatlan'
+		);
+		$menus[]=array(
+			'titulo'	=>'Nosotros',
+			'titulo_en'	=>'About Us',
+			'target'	=>'paginas/historia'
+		);
+		$menus[]=array(
+			'titulo'	=>'Contacto',
+			'titulo_en'	=>'Contact',
+			'target'	=>'paginas/contacto'
+		);
+		$menus[]=array(
+			'titulo'	=>'Ubicación',
+			'titulo_en'	=>'Location',
+			'target'	=>'paginas/ubicacion'
+		);
+		
+		return $menus;
 	}
 	
 	function intro(){	

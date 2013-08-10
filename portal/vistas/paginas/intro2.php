@@ -87,10 +87,10 @@
 				<img  src="<?php echo $WEB_BASE.'imagenes/logo_intro.png' ?> " width="312" height="108"/>
 				<div class="botones_idioma">
 					<div class="boton_idioma" style="">
-						<a href="#"><img  src="<?php echo $WEB_BASE.'imagenes/btn_esp_intro.png' ?> " width="92" height="93"/> </a>
+						<a href="<?php echo $APP_PATH; ?>es/inicio"><img  src="<?php echo $WEB_BASE.'imagenes/btn_esp_intro.png' ?> " width="92" height="93"/> </a>
 					</div>
 					<div class="boton_idioma" style="">
-						<a href="#"><img  src="<?php echo $WEB_BASE.'imagenes/btn_ing_intro.png' ?> " width="91" height="89"/> </a>
+						<a href="<?php echo $APP_PATH; ?>en/inicio"><img  src="<?php echo $WEB_BASE.'imagenes/btn_ing_intro.png' ?> " width="91" height="89"/> </a>
 					</div>
 				</div>
 			</div>

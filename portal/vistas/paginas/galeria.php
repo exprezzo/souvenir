@@ -35,7 +35,7 @@
 			$imagen=(empty($categoria['imagen']) )?  $WEB_BASE.'imagenes/no-image.jpg' : $WEB_BASE.'imagenes/categorias/'.$categoria['imagen'];
 			
 			if ($_idioma=='en'){
-				$target=$APP_PATH.$_idioma.'/portal/products/view/'.$categoria['id'].'/'.str_replace(' ','_',$titulo);
+				$target=$APP_PATH.$_idioma.'/portal/productos/ver/'.$categoria['id'].'/'.str_replace(' ','_',$titulo);
 			}else{
 				$target=$APP_PATH.$_idioma.'/portal/productos/ver/'.$categoria['id'].'/'.str_replace(' ','_',$titulo);
 			}						

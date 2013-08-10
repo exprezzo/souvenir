@@ -6,18 +6,18 @@
 	
 	RewriteRule ^admin$ backend/backend/inicio [L]
 	
-	RewriteRule ^en/pages/home$ en/paginas/inicio [L]
-	RewriteRule ^en/pages/gallery$ en/paginas/galeria [L]
-	RewriteRule ^en/pages/my_mazatlan$ en/paginas/my_mazatlan [L]
-	RewriteRule ^en/pages/history$ en/paginas/historia [L]
-	RewriteRule ^en/pages/contact$ en/paginas/contacto [L]
-	RewriteRule ^en/pages/location$ en/paginas/ubicacion [L]
+	# RewriteRule ^en/pages/home$ en/paginas/inicio [L]
+	# RewriteRule ^en/pages/gallery$ en/paginas/galeria [L]
+	# RewriteRule ^en/pages/my_mazatlan$ en/paginas/my_mazatlan [L]
+	# RewriteRule ^en/pages/history$ en/paginas/historia [L]
+	# RewriteRule ^en/pages/contact$ en/paginas/contacto [L]
+	# RewriteRule ^en/pages/location$ en/paginas/ubicacion [L]
 	
-	RewriteRule ^en/products/souvenirs$ en/productos/souvenirs [L]
-	RewriteRule ^en/products/ethnic$ en/productos/etnico [L]
-	RewriteRule ^en/products/beach$ en/productos/playa [L]
-	RewriteRule ^en/products/food$ en/productos/food [L]
-	RewriteRule ^en/portal/products/view/(.*)$ en/portal/productos/ver/$1 [L]
+	# RewriteRule ^en/products/souvenirs$ en/productos/souvenirs [L]
+	# RewriteRule ^en/products/ethnic$ en/productos/etnico [L]
+	# RewriteRule ^en/products/beach$ en/productos/playa [L]
+	# RewriteRule ^en/products/food$ en/productos/food [L]
+	# RewriteRule ^en/portal/products/view/(.*)$ en/portal/productos/ver/$1 [L]
 	
 	
 	RewriteRule ^en/(.*)$ core/entrada.php/$1?idioma_request=en [L]
