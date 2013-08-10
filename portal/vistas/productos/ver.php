@@ -22,6 +22,8 @@
 	$(function(){
 		$('#btn_esp').attr('href', '<?php echo $rutaEs; ?>');
 		$('#btn_ing').attr('href', '<?php echo $rutaIng; ?>');
+		
+		
 	});
 </script>
 <style>
@@ -29,15 +31,63 @@
 	.categorias li{ margin-right:20px; }
 	.categorias li, .productos li{list-style:none; display:inline-block;}	
 	.categorias li a img, .categorias li a span, .productos li a img, .productos li a span{vertical-align:middle;}	
+	
+	
+	#paginador_productos{text-align:center;}
+	#paginador_productos li{
+		display:inline-block;
+		margin-right:10px;
+	}
+	
+	
+	#paginador_productos  li:hover, #paginador_productos  li.activo{
+		
+	}
+	#paginador_productos  li{
+		
+	}
+	
+	#paginador_productos  a{
+		text-decoration:none; color:inherit; font-family:'Calabri'; 		
+		font-size:17.21px;
+		display:inline-block;
+		width: 10x;
+		height: 10px;
+		padding: 8px;		
+		line-height:11px;
+		color:#a8a8a8;
+		text-align: center;		
+	}
+	
+	#paginador_productos  a:hover, #paginador_productos  a.activo{		
+		
+		color:white;
+		-webkit-border-radius: 999px;
+		-moz-border-radius: 999px;
+		border-radius: 999px;
+		behavior: url(PIE.htc);
+		background: #ff9307;
+		
+	}
 </style>
 
 
-<h2 id="titulo_categoria" style="color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma';margin-bottom:22px;"><?php  echo  $categoriaActual['nombre'.$sufijo]; ?></h2> 
-
+<h2 id="titulo_categoria" style="position:absolute; color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma';margin-bottom:22px;"><?php  echo  $categoriaActual['nombre'.$sufijo]; ?></h2> 
 <?php 
-	 // print_r( $_PETICION );
-?>
+if ( !empty($this->totalProductos) ){
+	echo '<ul id="paginador_productos">';
+	$paginActual=$this->paginaActual;
+	for($i=0; $i<$this->numPaginas; $i++){
+			$iP=$i + 1;
+			$clase=( $iP == $paginActual )? 'activo' : '';
+				
+			
+			echo '<li class="  "><a class="'.$clase.'" href="'.$APP_PATH.$_idioma.'/portal/productos/ver/'.$categoriaActual['id'].'?pagina='.($i+1).'#titulo_categoria">'.($i+1).'</a></li>';
 
+	}
+	echo '</ul>';
+}
+?>
 <ul class="productos">
 	<?php
 		if (sizeof($this->productos) ==0 ){
@@ -80,3 +130,21 @@
 		}
 	?>	
 </ul>
+
+
+
+<?php 
+if ( !empty($this->totalProductos) ){
+	echo '<ul id="paginador_productos">';
+	$paginActual=$this->paginaActual;
+	for($i=0; $i<$this->numPaginas; $i++){
+			$iP=$i + 1;
+			$clase=( $iP == $paginActual )? 'activo' : '';
+				
+			
+			echo '<li class="  "><a class="'.$clase.'" href="'.$APP_PATH.$_idioma.'/portal/productos/ver/'.$categoriaActual['id'].'?pagina='.($i+1).'#titulo_categoria">'.($i+1).'</a></li>';
+
+	}
+	echo '</ul>';
+}
+?>

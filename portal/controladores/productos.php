@@ -143,11 +143,26 @@ class productos extends Controlador{
 				array('dataKey'=>'fk_categoria', 'filterOperator'=>'equals','filterValue'=>$id)
 			)
 		);		
-		$resProds = $mod->buscar( $params );				
+		
+		$start=0;
+		$limit=9;
+		
+		$paginaActual =  empty($_GET['pagina'])?  1 : $_GET['pagina'];
+		$start=empty($_GET['pagina'])?  0 : ($_GET['pagina'] - 1) * $limit;
+		
+		$params['start']=$start;
+		$params['limit']=$limit; 
+		
+		
+		$resProds = $mod->buscar( $params );
+
+
 		$vista->productos=$resProds['datos'];
+		$vista->totalProductos = $resProds['total'];
 		
-		
-		
+		$numPaginas= $vista->totalProductos / $limit;
+		$vista->numPaginas = $numPaginas;
+		$vista->paginaActual  = $paginaActual ;
 		$this->mostrarVista();
 		
 	}

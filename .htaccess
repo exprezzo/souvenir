@@ -1,7 +1,7 @@
-<IfModule mod_rewrite.c>	
-	# Enrutamiento mediante htacces de apache		
-    RewriteEngine On			
-	RewriteRule ^$ paginas/intro 
+<IfModule mod_rewrite.c>
+	# Enrutamiento mediante htacces de apache
+    RewriteEngine On
+	RewriteRule ^$ paginas/intro
 	RewriteRule ^/$ paginas/intro
 	
 	RewriteRule ^admin$ backend/backend/inicio [L]
@@ -18,15 +18,12 @@
 	# RewriteRule ^en/products/beach$ en/productos/playa [L]
 	# RewriteRule ^en/products/food$ en/productos/food [L]
 	# RewriteRule ^en/portal/products/view/(.*)$ en/portal/productos/ver/$1 [L]
-	
-	
-	RewriteRule ^en/(.*)$ core/entrada.php/$1?idioma_request=en [L]
-	RewriteRule ^es/(.*)$ core/entrada.php/$1?idioma_request=es [L]
-	
-	
-	
+		
+	RewriteRule ^en/(.*)$ core/entrada.php/$1?idioma_request=en [L,QSA]
+	RewriteRule ^es/(.*)$ core/entrada.php/$1?idioma_request=es [L,QSA]
+		
 	RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ core/entrada.php/$1 [L]
+    RewriteRule ^(.*)$ core/entrada.php/$1 [L] [QSA]
 	ErrorDocument 500 error500.html
 </IfModule>
