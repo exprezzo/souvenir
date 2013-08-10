@@ -60,6 +60,7 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			background-image:url('<?php echo $WEB_BASE; ?>imagenes/bg_menu_categoria.png' );			
 			display:inline-block;line-height: 40px;font-size: 14.5px;font-family: "Mark Sans";
 			color: #2e2e2e;padding-left: 55px;text-decoration: none;margin-bottom:-5px;width:184px; height:47px; 
+			font-weight:bold;
 		}
 		#menu a:hover{ color: #ff9737; }
 		

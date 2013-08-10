@@ -103,6 +103,9 @@
 		.ws_bullets{ bottom: -26px !important; }
 	#cinta_slideshow{position: absolute;top: -9px;z-index: 100;left: -10px;}
 	#wowslider-container1{z-index:1;}
+	
+	.disquss_wrapper{ width:717px !important; }
+	.publicacion_wrap{margin:0;}
 </style>
 <script>
 	$(function(){
@@ -120,7 +123,8 @@
 	<!-- Start WOWSlider.com BODY section -->
 	
 	<div id="wowslider-container1" style="">
-		<div class="ws_images"><ul>
+		<div class="ws_images">
+			<ul>
 			<?php
 				$numero=1;
 				foreach($paginas as $page){
@@ -151,12 +155,9 @@
 	</div>
 	<img id="cinta_slideshow" src="<?php echo $WEB_BASE; ?>imagenes/esq_sup_izq_slider.png" />
 </div>
-</div>
+
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/wowslider.js"></script>
 <script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine1/script.js"></script>
 <!-- End WOWSlider.com BODY section -->
-</div>
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br />
+<?php $this->mostrar('/historia'); ?>
