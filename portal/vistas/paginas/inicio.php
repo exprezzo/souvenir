@@ -114,6 +114,9 @@ background-repeat: no-repeat;}
 
 .publicacion_wrap{margin-top:15px; }
 .titulo_publicacion{ margin-bottom:0px !important;}
+
+.ws_prev{left:-32px !important;}
+.ws_next{right:-32px !important;}
 </style>
 <script>
 	$(function(){

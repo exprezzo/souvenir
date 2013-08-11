@@ -72,11 +72,68 @@ class Paginas extends Controlador{
 	function buscar(){
 		return $this->mostrarVista();
 	}
-	function contacto(){
-		$vista= $this->getVista();
+	
+	function mensaje_enviado(){
+		$vista= $this->getVista();		
+		
 		$vista->menus = $this->getMenus();
-		$vista->categorias = $this->getCategorias();
 		return $vista->mostrar( '/contacto', true);
+	}
+	
+	function contacto(){
+	
+	
+		$tipo = $_SERVER['REQUEST_METHOD'];
+		if ( $tipo =='GET'){
+			$vista= $this->getVista();
+			$vista->menus = $this->getMenus();
+			$vista->categorias = $this->getCategorias();
+			return $vista->mostrar( '/contacto', true);
+		}else if( $tipo == 'POST' ){
+			// print_r($_REQUEST); exit;|
+			$nombre = $_REQUEST['nombre'];
+			// $email = $_REQUEST['email'];
+			$mensaje = $_REQUEST['mensaje'];
+			$copia = $_REQUEST['copia'];
+			
+			
+			$remitente = $_POST['email'] ;
+			$destino = "runtim3.error@gmail.com, contacto@mymazatlansouvenirs.com" ;
+			
+			
+			
+			$asunto = $_POST['asunto'];
+			$mensaje ='Enviador por: '.$nombre.'<br />'. $mensaje ;
+			
+			$encabezados = "From: $remitente\nReply-To: $destino\nContent-Type: text/html; charset=iso-8859-1" ;
+			$exito = @mail($destino, $asunto, $mensaje, $encabezados);
+			
+			
+			if ($copia=='true') {
+				$destino=$remitente;
+				$exito = @mail($destino, $asunto, $mensaje, $encabezados);
+			}
+			if ($exito){			
+				$res=array(
+					'success'=>true					
+				);
+				// global $APP_PATH;
+				// header('Location: '.$APP_PATH.'paginas/email_exito#contenido');
+			}else{
+				$error = error_get_last();
+				// print_r( $error );
+				$res=array(
+					'success'=>false,
+					'msg'=>'No pudo mandarse el mensaje'
+				);
+				// $vista->datos=$_POST;
+				// $vista->error=true;
+				// return $vista->mostrar( );
+			}
+			
+			echo json_encode($res);
+		}
+		
 	}
 	function galeria(){
 		$vista=$this->getVista();
