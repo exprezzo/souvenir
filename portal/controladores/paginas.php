@@ -27,7 +27,7 @@ class Paginas extends Controlador{
 		$menus[]=array(
 			'titulo'	=>'Galeria',
 			'titulo_en'	=>'Gallery',
-			'target'	=>'paginas/galeria'
+			'target'	=>'productos/galeria'
 		);
 		$menus[]=array(
 			'titulo'	=>'Mi Mazatlán',

@@ -110,7 +110,7 @@ if ( !empty($this->totalProductos) ){
 			// echo '<li><a href="'.$target.'"><img width="50" height="50" src="'.$imagen.'" /><span>'.$titulo.'</span></a></li>';
 		?>	
 			<li style="border: #eeeeee 2px solid; margin-right:22px; margin-bottom:19px;">
-				
+				<a href="<?php echo $APP_PATH.$_idioma.'/portal/productos/detalle/'.$prod['id'].'/'.str_replace(' ','_',$prod['nombre'.$sufijo]); ?>">
 				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;"/>
 				<a href="#" style="text-decoration:underline;"></a>
 				<div style="background-color:#e8e8e8;  padding:12px 6px 7px 9px; border:#f3f3f3 2px solid; border-top:0;">
@@ -118,13 +118,7 @@ if ( !empty($this->totalProductos) ){
 					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;">$<?php echo $precio; ?></div>
 					<div style="clear:both;"></div>
 				</div>
-				<!--div style="width: 230px;display: inline-block;vertical-align: top;">
-					
-					<h3>$<?php //echo $precio; ?></h3>
-					<p><?php //echo $descripcion; ?></p>
-					
-				</div-->
-				
+				</a>
 			</li>
 	<?php
 		}

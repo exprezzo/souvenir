@@ -44,6 +44,28 @@ class productos extends Controlador{
 		
 		
 	}
+	function detalle(){
+		global $_PETICION;
+		
+		$mod = $this->getModelo();
+		$params['id'] = $_PETICION->params[0];		
+		$producto = $mod->obtener($params);
+		
+		$imgMod = new imagen_productoModelo();		
+		$params=array(
+			'filtros'=>array(
+				array('dataKey'=>'fk_producto', 'filterOperator'=>'equals','filterValue'=>$params['id'] )
+			)
+		);		
+		$imagenes = $imgMod->buscar( $params );
+		
+		$vista = $this->getVista();
+		$vista->producto = $producto;
+		$vista->imagenes = $imagenes;
+		$this->mostrarVista();
+		
+	}
+	
 	
 	private function getCategorias(){
 		
@@ -63,7 +85,7 @@ class productos extends Controlador{
 		$menus[]=array(
 			'titulo'	=>'Galeria',
 			'titulo_en'	=>'Gallery',
-			'target'	=>'paginas/galeria'
+			'target'	=>'productos/galeria'
 		);
 		$menus[]=array(
 			'titulo'	=>'Mi Mazatlán',
@@ -101,6 +123,7 @@ class productos extends Controlador{
 		
 		
 	}
+	
 	
 	function guardar(){
 		return parent::guardar();
