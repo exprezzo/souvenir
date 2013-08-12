@@ -5,6 +5,8 @@ if ( empty($_GET['idioma_request']) ){
 	$_idioma =  $_GET['idioma_request'];
 }
 
+$pagina['footer']='Texto footer Texto footer  Texto footer  Texto footer ';
+$pagina['footer_en']='Footer text Footer text  Footer text Footer text Footer text Footer text ';
 
 if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
 
@@ -232,11 +234,6 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		
 		
 	</div>
-	<div id="footer">
-		<div class="centrado" style="width:980px; text-align: left; display:inline-block;">
-			<a href="#" id="logito"><img src="<?php echo $WEB_BASE.'imagenes/logito.png'; ?>" alt="My Mazatlan Souvenir" width="100" height="29" > </a>
-			<span>Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina   Texto pie de pagina.</span>
-		</div>
-	</div>
+	<?php include('../portal/vistas/footer.php'); ?>	
 </body>
 </html>
