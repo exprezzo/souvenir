@@ -1,0 +1,24 @@
+#slideshow{
+			width:717px; height:318px; 
+			background-image:url( "<?php echo $WEB_BASE; ?>imagenes/marco_slideshow.png" );
+			padding-top:16px;
+			background-repeat: no-repeat;
+			position:relative;
+		}
+		.ws_bullets{ bottom: -26px !important; }
+	#cinta_slideshow{position: absolute;top: -9px;z-index: 100;left: -10px;}
+	#wowslider-container1{z-index:1;}
+	
+	.disquss_wrapper{ width:717px !important; }
+	.publicacion_wrap{width:668px; margin:0;background-image: url(<?php echo $WEB_BASE; ?>imagenes/hojas.png);
+background-size: 100%;
+padding: 17px 25px 25px 25px;
+height: 279px;
+background-repeat: no-repeat;}
+.titulo_publicacion{margin-bottom: 5px; margin-top: 6px; }
+
+.publicacion_wrap{margin-top:15px; }
+.titulo_publicacion{ margin-bottom:0px !important;}
+
+.ws_prev{left:-32px !important;}
+.ws_next{right:-32px !important;}

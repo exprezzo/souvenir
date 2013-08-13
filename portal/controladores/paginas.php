@@ -32,7 +32,7 @@ class Paginas extends Controlador{
 		$menus[]=array(
 			'titulo'	=>'Mi Mazatlán',
 			'titulo_en'	=>'My Mazatlan',
-			'target'	=>'paginas/my_mazatlan'
+			'target'	=>'publicaciones/my_mazatlan'
 		);
 		$menus[]=array(
 			'titulo'	=>'Nosotros',
