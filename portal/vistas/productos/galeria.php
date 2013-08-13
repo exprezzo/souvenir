@@ -76,7 +76,7 @@
 </style>
 
 
-<h2 id="titulo_categoria" style=" color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma';margin-bottom:22px;"><?php  echo  $pagina['nombre'.$sufijo]; ?></h2> 
+<h2 id="titulo_categoria" style="margin-bottom:20px ;color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma'; "><?php  echo  $pagina['nombre'.$sufijo]; ?></h2> 
 
 <ul class="productos">
 	<?php
@@ -98,10 +98,9 @@
 		?>	
 			<li style=" margin-right:22px; margin-bottom:19px;">
 				<a href="<?php echo $APP_PATH.$_idioma.'/portal/productos/ver/'.$prod['id'].'/'.$prod['nombre'.$sufijo]; ?>">
-				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius: 0 8px 0 8px; margin-bottom: 7px;"/>
-				<a href="#" style="text-decoration:underline;"></a>
-				<div style="background-color:#e8e8e8;  padding:12px 6px 7px 9px; border:#f3f3f3 2px solid; border-top:0;">
-					<div style="float:left; color:#888888; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
+				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius: 8px; "/>				
+				<div style="background-color:#ff9307;  padding:5px 6px 7px 9px;  border-top:0; position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">
+					<div style="float:left; color:white; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
 					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;"></div>
 					<div style="clear:both;"></div>
 				</div>

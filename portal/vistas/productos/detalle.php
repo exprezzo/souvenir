@@ -113,20 +113,23 @@ jQuery(document).ready(function($) {
 		
 	</div>
 	<!-- End WOWSlider.com BODY section -->
-	<div style="display:inline-block; vertical-align:top; margin-left:25px;">
-		<h2><?php echo $nombre; ?> </h2>
-		<h3>Codigo: <?php echo $codigo; ?> </h3>
-		<h3>$<?php echo $precio; ?> </h3>
-		<span>
-			<?php echo $descripcion; ?>
-		</span>
-		
-		<br /><br />
+	<div style="display:inline-block; vertical-align:top; margin-left:25px; position:relative;">		
+		<h2 id="titulo_categoria" style="color:#9eb612;font-size:17.21px;  font-family:'Tahoma';margin-bottom:3px;"><?php  echo  $nombre; ?></h2> 
+		<h3 style="color:#888888; margin-bottom:10px;">Codigo: <?php echo $codigo; ?> </h3>
+		<h3 style="position:absolute; display:inline-block; right:0; color: #faa434;font-family: 'Tahoma';font-size: 32px;top:0; ">$<?php echo $precio; ?> </h3>
 		
 		<span class='st_facebook_hcount' displayText='Facebook'></span>
 		<span class='st_twitter_hcount' displayText='Tweet'></span>		
 		<span class='st_googleplus_hcount' displayText=''></span>		
 		<span class='st_email_hcount' displayText=''></span>
+		<br /><br />
+		
+		
+		<span style="color:#888888; ">
+			<?php echo $descripcion; ?>
+		</span>
+		
+		
 	</div>
 
 
