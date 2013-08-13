@@ -35,25 +35,6 @@ $descripcion = $this->producto['descripcion'.$sufijo];
 	display: inline-block; float:left;
 }
 
-.st-twitter-counter{
-background-image: url(<?php echo $WEB_BASE; ?>imagenes/tw_c_ico.png) !important;
-width: 20px !important;
-}
-
-.st-facebook-counter{
-background-image: url(<?php echo $WEB_BASE; ?>imagenes/fb_c_ico.png) !important;
-width: 20px !important;
-}
-
-.st_googleplus_hcount .stButton_gradient:not(.stHBubble){background-image: none !important; border:none; width:21px !important; }
-
-.st_email_hcount .stButton_gradient:not(.stHBubble){background-image: none !important; border:none; width:21px !important; }
-.stButton .googleplus{
-	background-image: url(<?php echo $WEB_BASE; ?>imagenes/gp_c_ico.png) !important;width: 20px !important;
-	height: 23px;
-position: relative;
-margin-top: 2px;
-}
 </style>
 <script>
 jQuery(document).ready(function($) {

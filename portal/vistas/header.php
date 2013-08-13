@@ -171,6 +171,19 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			}
 		}
 		
+		.wrap_social{
+			display: inline-block;
+			position: absolute;
+			top: 135px;
+			left: 402px;
+			background-image: url(<?php echo $WEB_BASE; ?>imagenes/bg_social.png);
+			width: 243px;
+			height: 42px;
+			padding: 6px 0 0 0px;
+			text-align: center;
+			background-repeat: no-repeat;
+			
+		}
 		
 	</style>
 	<script>
@@ -206,6 +219,10 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_BASE; ?>css/estilos.css" />
 	
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "ur-56975a85-9c7a-18de-9afd-481c96c13a3b", doNotHash: false, doNotCopy: false, hashAddressBar: true,servicePopup:true});</script>
+
 	</head>
 <body>
 	
@@ -224,5 +241,10 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	<div id="botones_idioma">
 		<a href="<?php echo  $APP_PATH.'es/'.$_PETICION->controlador.'/'.$_PETICION->accion; ?>" id="btn_esp"></a>
 		<a href="<?php echo  $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion; ?>" id="btn_ing"></a>
+	</div>
+	<div class="wrap_social">
+		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_facebook_hcount' displayText='Facebook'></span>
+		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_twitter_hcount' displayText='Tweet'></span>		
+		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_googleplus_hcount' displayText=''></span>				
 	</div>
 </div>

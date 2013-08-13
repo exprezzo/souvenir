@@ -1,4 +1,24 @@
 
+.st-twitter-counter{
+background-image: url(../imagenes/tw_c_ico.png) !important;
+width: 20px !important;
+}
+
+.st-facebook-counter{
+background-image: url(../imagenes/fb_c_ico.png) !important;
+width: 20px !important;
+}
+
+.st_googleplus_hcount .stButton_gradient:not(.stHBubble){background-image: none !important; border:none; width:21px !important; }
+
+.st_email_hcount .stButton_gradient:not(.stHBubble){background-image: none !important; border:none; width:21px !important; }
+.stButton .googleplus{
+	background-image: url(../imagenes/gp_c_ico.png) !important;width: 20px !important;
+	height: 23px !important;
+position: relative;
+margin-top: 2px;
+}
+
 /*
 #menu_categorias li a{	
 	background-image:url(../imagenes/btn_souvenir_left.png), url(../imagenes/btn_souvenir_bg.png), url(../imagenes/btn_souvenir_right.png);
