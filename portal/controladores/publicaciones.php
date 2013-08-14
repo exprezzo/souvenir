@@ -10,6 +10,18 @@ class publicaciones extends Controlador{
 	var $pk="id";
 	var $nombre="publicaciones";
 	
+	function my_mazatlan(){
+		$vista = $this->getVista();
+		
+		
+		$vista->pagina = array(
+			'titulo' => 'Mi Mazatlán',
+			'titulo_en' => 'My Mazatlan'
+		);
+		
+		$this->mostrarVista();
+	}
+	
 	function detalle(){
 		global $_PETICION;
 		
@@ -75,6 +87,7 @@ class publicaciones extends Controlador{
 		global $_PETICION;
 		$vista=$this->getVista();
 		
+		
 		if (empty ($_PETICION->params) ){
 			$id=0;
 		}else{
@@ -91,6 +104,13 @@ class publicaciones extends Controlador{
 		$cat = $mod->buscar( $params );
 		$vista->categoriaActual=$cat['datos'][0];
 		
+		$vista->pagina = array(
+			'titulo' => $vista->categoriaActual['nombre'],
+			'titulo_en' => $vista->categoriaActual['nombre_en']
+		);
+		
+	
+	
 		$cats=$mod->buscar( array() );		
 		$vista->categorias=$cats['datos'];
 		

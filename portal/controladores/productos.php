@@ -9,6 +9,18 @@ class productos extends Controlador{
 	var $pk="id";
 	var $nombre="productos";
 	
+	function galeria(){
+		$vista = $this->getVista();
+		
+		
+		$vista->pagina = array(
+			'titulo' => 'Galeria',
+			'titulo_en' => 'Gallery'
+		);
+		
+		$this->mostrarVista();
+	}
+	
 	function mostrarVista($vistaFile=''){
 		$vista= $this->getVista();
 		global $_PETICION;
@@ -61,6 +73,12 @@ class productos extends Controlador{
 		
 		$vista = $this->getVista();
 		$vista->producto = $producto;
+		
+		$vista->pagina = array(
+			'titulo' => $vista->producto['nombre'],
+			'titulo_en' => $vista->producto['nombre_en']
+		);
+		
 		$vista->imagenes = $imagenes;
 		$this->mostrarVista();
 		
@@ -151,6 +169,11 @@ class productos extends Controlador{
 		
 		$cat = $mod->buscar( $params );
 		$vista->categoriaActual=$cat['datos'][0];
+		
+		$vista->pagina = array(
+			'titulo' => $vista->categoriaActual['nombre'],
+			'titulo_en' => $vista->categoriaActual['nombre_en']
+		);
 		
 		$cats=$mod->buscar( array() );		
 		$vista->categorias=$cats['datos'];

@@ -227,13 +227,44 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "ur-56975a85-9c7a-18de-9afd-481c96c13a3b", doNotHash: false, doNotCopy: false, hashAddressBar: true,servicePopup:true});</script>
-	<title><?php echo $_PETICION->controlador.'/'.$_PETICION->accion; ?></title>
-	
+	<script type="text/javascript">stLight.options({publisher: "ur-56975a85-9c7a-18de-9afd-481c96c13a3b", doNotHash: false, doNotCopy: false, hashAddressBar: false,servicePopup:true});</script>
+	<?php
+		if ( isset($this->pagina) ){
+			$titulo = !empty($this->pagina['titulo'.$sufijo])? $this->pagina['titulo'.$sufijo] :  $_PETICION->controlador.'/'.$_PETICION->accion;
+		}else{
+			$titulo = $_PETICION->controlador.'/'.$_PETICION->accion;
+		}
+	?>
+	<title><?php echo $titulo ?></title>
 	<style>
 		.gsc-control-cse{
 			background-color:#f6f6f6 !important; border:none !important;
 		}
+		form.gsc-search-box{ padding:10px 0px 20px 0px !important; }
+			
+		td.gsc-input{
+			left: 45px;
+			position: relative;
+			width: 121px;
+			display: inline-block !important
+		}
+		input.gsc-input{
+			background-image:none !important;  background:none !important; border:none !important;
+			background-image:url(<?php echo $WEB_BASE; ?>imagenes/searchbox_input.png) !important; background-repeat:no-repeat !important;
+			color:#333333 !important; width:121px !important; height: 13px !important;
+			;
+		}
+		input.gsc-search-button {
+			background:none !important; border:none !important; color:transparent !important;  background-repeat:no-repeat !important;
+			background-image:url(<?php echo $WEB_BASE; ?>imagenes/search_btn.png) !important;
+			position: relative;
+			margin: 0 !important;
+padding: 0 !important;
+width: 24px !important;
+min-width:0 !important;
+			cursor:pointer !important;
+		}
+		
 	</style>
 	</head>
 <body>
@@ -251,8 +282,27 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		?>		
 	</ul>
 	<div id="botones_idioma">
-		<a href="<?php echo  $APP_PATH.'es/'.$_PETICION->controlador.'/'.$_PETICION->accion; ?>" id="btn_esp"></a>
-		<a href="<?php echo  $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion; ?>" id="btn_ing"></a>
+		<?php 
+			if ( $_PETICION->controlador == 'productos' && $_PETICION->accion=='ver' && isset($this->categoriaActual ) ){
+				$categoriaActual  = $this->categoriaActual;				
+				$rutaEs		=$APP_PATH.'es/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
+				$rutaIng	=$APP_PATH.'en/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
+			}else if ( $_PETICION->controlador == 'publicaciones' && $_PETICION->accion=='mostrar' && isset($this->categoriaActual ) ){
+				$categoriaActual  = $this->categoriaActual;				
+				$rutaEs		=$APP_PATH.'es/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
+				$rutaIng	=$APP_PATH.'en/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
+	
+				// $rutaEs		=$APP_PATH.'es/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
+				// $rutaIng	=$APP_PATH.'en/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
+			}
+			else{
+				$rutaEs		= $APP_PATH.'es/'.$_PETICION->controlador.'/'.$_PETICION->accion; 
+				$rutaIng	= $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion;
+			}
+			
+		?>
+		<a href="<?php echo  $rutaEs ?>" id="btn_esp"></a>
+		<a href="<?php echo  $rutaIng ?>" id="btn_ing"></a>
 	</div>
 	<div class="wrap_social">
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_facebook_hcount' displayText='Facebook'></span>

@@ -5,13 +5,11 @@
 	//Determinar categoria actual
 	$categoriaActual = $this->categoriaActual;	
 	
-	$rutaEs		=$APP_PATH.'es/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
-	$rutaIng	=$APP_PATH.'en/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
+	
 ?>
 <script>
 	$(function(){
-		$('#btn_esp').attr('href', '<?php echo $rutaEs; ?>');
-		$('#btn_ing').attr('href', '<?php echo $rutaIng; ?>');
+		
 		$('a[mtarget="publicaciones/my_mazatlan"]').addClass('activo');
 		
 	});

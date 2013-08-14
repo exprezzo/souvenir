@@ -17,6 +17,29 @@ class Paginas extends Controlador{
 		
 	}
 	
+	
+	function historia(){
+		$vista = $this->getVista();
+				
+		$vista->pagina = array(
+			'titulo' => 'Nosostros',
+			'titulo_en' => 'About Us'
+		);
+		
+		$this->mostrarVista();
+	}
+	function inicio(){
+		$vista = $this->getVista();
+		
+		
+		$vista->pagina = array(
+			'titulo' => 'Inicio',
+			'titulo_en' => 'Home'
+		);
+		
+		$this->mostrarVista();
+	}
+	
 	function getMenus(){
 		$menus=array();
 		$menus[]=array(
@@ -49,6 +72,7 @@ class Paginas extends Controlador{
 		return $menus;
 	}
 	
+	
 	function intro(){	
 		$vista= $this->getVista();
 		return $vista->mostrar( );
@@ -76,9 +100,15 @@ class Paginas extends Controlador{
 	}
 	
 	function contacto(){
+		
+		
 		$tipo = $_SERVER['REQUEST_METHOD'];
 		if ( $tipo =='GET'){
 			$vista= $this->getVista();
+			$vista->pagina = array(
+				'titulo' => 'Contacto',
+				'titulo_en' => 'Contact Us'
+			);
 			$vista->menus = $this->getMenus();
 			$vista->categorias = $this->getCategorias();
 			return $vista->mostrar( '/contacto', true);
