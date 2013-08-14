@@ -25,7 +25,54 @@
 		margin-right:10px;
 	}
 	
-	
+	/*
+	.caja_efecto 
+	{
+	  position: relative;
+	  width: 60%;
+	  background: #ddd;
+	  -moz-border-radius: 4px;
+	  border-radius: 4px;
+	  padding: 2em 1.5em;
+	  color: rgba(0,0,0, .8);
+	  text-shadow: 0 1px 0 #fff;
+	  line-height: 1.5;
+	  margin: 60px auto;
+	}
+
+
+	.caja_efecto:before, .caja_efecto:after 
+	{
+	  z-index: -1; 
+	  position: absolute; 
+	  content: "";
+	  bottom: 15px;
+	  left: 10px;
+	  width: 50%; 
+	  top: 80%;
+	  max-width:300px;
+	  background: rgba(0, 0, 0, 0.7); 
+	  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);   
+	  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	  -webkit-transform: rotate(-3deg);    
+	  -moz-transform: rotate(-3deg);   
+	  -o-transform: rotate(-3deg);
+	  -ms-transform: rotate(-3deg);
+	  transform: rotate(-3deg);
+	}
+
+	.caja_efecto:after 
+	{
+	  -webkit-transform: rotate(3deg);
+	  -moz-transform: rotate(3deg);
+	  -o-transform: rotate(3deg);
+	  -ms-transform: rotate(3deg);
+	  transform: rotate(3deg);
+	  right: 10px;
+	  left: auto;
+	}
+	*/
 </style>
 
 
@@ -49,11 +96,11 @@
 			$target="#";
 			// echo '<li><a href="'.$target.'"><img width="50" height="50" src="'.$imagen.'" /><span>'.$titulo.'</span></a></li>';
 		?>	
-			<li style=" margin-right:22px; margin-bottom:19px;">
+			<li class="caja_efecto" style=" margin-right:22px; margin-bottom:19px;">
 				<a href="<?php echo $APP_PATH.$_idioma.'/portal/publicaciones/mostrar/'.$prod['id'].'/'.str_replace(' ','_',$prod['nombre'.$sufijo]); ?>">
-				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius: 0 8px 0 8px; margin-bottom: 7px;"/>
+				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius:8px; margin-bottom: 7px;"/>
 				<a href="#" style="text-decoration:underline;"></a>
-				<div style="background-color:#e8e8e8;  padding:12px 6px 7px 9px; border:#f3f3f3 2px solid; border-top:0;">
+				<div style="background-color:#e8e8e8;  padding:5px 6px 7px 9px; border-top:0;position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">
 					<div style="float:left; color:#888888; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
 					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;"></div>
 					<div style="clear:both;"></div>

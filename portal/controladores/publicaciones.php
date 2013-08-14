@@ -2,6 +2,8 @@
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/publicacion_modelo.php';
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/categorias_publicacion_modelo.php';
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/categoria_producto_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/imagen_publicacion_modelo.php';
+
 class publicaciones extends Controlador{
 	var $modelo="publicacion";
 	var $campos=array('id','titulo','contenido','imagen','titulo_en','contenido_en','orden','fk_categoria','fecha');
@@ -15,14 +17,14 @@ class publicaciones extends Controlador{
 		$params['id'] = $_PETICION->params[0];		
 		$publicacion = $mod->obtener($params);
 		
-		// $imgMod = new imagen_productoModelo();		
-		// $params=array(
-			// 'filtros'=>array(
-				// array('dataKey'=>'fk_producto', 'filterOperator'=>'equals','filterValue'=>$params['id'] )
-			// )
-		// );		
-		// $imagenes = $imgMod->buscar( $params );
-		$imagenes = array(); $imagenes['datos'] = array();
+		$imgMod = new imagen_publicacionModelo();		
+		$params=array(
+			'filtros'=>array(
+				array('dataKey'=>'fk_publicacion', 'filterOperator'=>'equals','filterValue'=>$params['id'] )
+			)
+		);		
+		$imagenes = $imgMod->buscar( $params );
+		
 		
 		$vista = $this->getVista();
 		$vista->publicacion = $publicacion;
@@ -60,11 +62,13 @@ class publicaciones extends Controlador{
 		}
 		
 		$vista->menus = $this->getMenus();
-		$vista->categorias = $this->getCategorias();
+		// $vista->categorias = $this->getCategorias();
+		
+		$vista->categorias = $this->getCategoriasPublicacion();
 		
 		$vista->categoriasPubs = $this->getCategoriasPublicacion();
 		
-		return $vista->mostrar( '/tema', true);
+		return $vista->mostrar( '/tema_mazatlan', true);
 	}
 	
 	function mostrar(){

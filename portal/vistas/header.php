@@ -222,7 +222,7 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 	<script type="text/javascript">stLight.options({publisher: "ur-56975a85-9c7a-18de-9afd-481c96c13a3b", doNotHash: false, doNotCopy: false, hashAddressBar: true,servicePopup:true});</script>
-
+	<title><?php echo $_PETICION->controlador.'/'.$_PETICION->accion; ?></title>
 	</head>
 <body>
 	
@@ -247,4 +247,20 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_twitter_hcount' displayText='Tweet'></span>		
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_googleplus_hcount' displayText=''></span>				
 	</div>
+	
+	<form method="get" action="http://www.google.com/search">
+
+		<div style="border:1px solid black;padding:4px;width:20em;">
+		<table border="0" cellpadding="0">
+		<tr><td>
+		<input type="text"   name="q" size="25"
+		 maxlength="255" value="" />
+		<input type="submit" value="Google Search" /></td></tr>
+		<tr><td align="center" style="font-size:75%">
+		<input type="checkbox"  name="sitesearch"
+		 value="mymazatlansouvenirs.com/demo/es/inicio" checked /> only search Ask Dave Taylor<br />
+		</td></tr></table>
+		</div>
+
+		</form>
 </div>

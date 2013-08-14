@@ -99,8 +99,8 @@
 			<li style=" margin-right:22px; margin-bottom:19px;">
 				<a href="<?php echo $APP_PATH.$_idioma.'/portal/productos/ver/'.$prod['id'].'/'.$prod['nombre'.$sufijo]; ?>">
 				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius: 8px; "/>				
-				<div style="background-color:#ff9307;  padding:5px 6px 7px 9px;  border-top:0; position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">
-					<div style="float:left; color:white; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
+				<div style="background-color:#e8e8e8;  padding:5px 6px 7px 9px;  border-top:0; position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">
+					<div style="float:left; color:#888888; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
 					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;"></div>
 					<div style="clear:both;"></div>
 				</div>

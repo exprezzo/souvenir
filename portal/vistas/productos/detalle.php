@@ -13,6 +13,7 @@ $precio = $this->producto['precio'.$sufijo];
 $descripcion = $this->producto['descripcion'.$sufijo];
 
 	$rutaEs		=$APP_PATH.'es/portal/productos/detalle/'.$this->producto['id'].'/'.str_replace(" ",'_',$this->producto['nombre'.$sufijo]); 
+	$rutaEn		=$APP_PATH.'en/portal/productos/detalle/'.$this->producto['id'].'/'.str_replace(" ",'_',$this->producto['nombre'.$sufijo]); 
 	
 ?>
 
@@ -39,6 +40,9 @@ $descripcion = $this->producto['descripcion'.$sufijo];
 <script>
 jQuery(document).ready(function($) {
 	$('a[mtarget="productos/galeria"]').addClass('activo');
+	
+	$('#btn_esp').attr('href','<?php echo $rutaEs; ?>');
+	$('#btn_ing').attr('href','<?php echo $rutaEn; ?>');
 	
 	$(".galeria_de_imagenes a").bind('click',function(e){
 		e.preventDefault();
@@ -79,8 +83,7 @@ jQuery(document).ready(function($) {
 				</ul>
 			</div>
 			<div class="ws_thumbs"><div>
-				<?php
-					
+				<?php					
 					foreach($imagenes as $image){
 					?>					
 						<a href="#" title=""><img src="<?php echo $WEB_BASE.'imagenes/'.$image['imagen']; ?>" alt="" width="79" height="45" /></a>
@@ -88,8 +91,7 @@ jQuery(document).ready(function($) {
 					}
 				?>							
 				</div></div>			
-			<div class="ws_shadow"></div>
-			
+			<div class="ws_shadow"></div>			
 		</div>
 		
 	</div>
@@ -105,8 +107,7 @@ jQuery(document).ready(function($) {
 		<span class='st_email_hcount' displayText=''></span>
 		<br /><br />
 		
-		
-		<span style="color:#888888; ">
+		<span style="color:#888888; max-width: 274px; display: inline-block;">
 			<?php echo $descripcion; ?>
 		</span>
 		
