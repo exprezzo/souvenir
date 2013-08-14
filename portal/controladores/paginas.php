@@ -68,21 +68,14 @@ class Paginas extends Controlador{
 		$vista= $this->getVista();
 		return $vista->mostrar( );
 	}
-	
-	function buscar(){
-		return $this->mostrarVista();
-	}
-	
+
 	function mensaje_enviado(){
-		$vista= $this->getVista();		
-		
+		$vista= $this->getVista();				
 		$vista->menus = $this->getMenus();
 		return $vista->mostrar( '/contacto', true);
 	}
 	
 	function contacto(){
-	
-	
 		$tipo = $_SERVER['REQUEST_METHOD'];
 		if ( $tipo =='GET'){
 			$vista= $this->getVista();
@@ -132,9 +125,9 @@ class Paginas extends Controlador{
 			}
 			
 			echo json_encode($res);
-		}
-		
+		}		
 	}
+	
 	function galeria(){
 		$vista=$this->getVista();
 		
@@ -143,6 +136,11 @@ class Paginas extends Controlador{
 		$vista->categorias=$cats['datos'];
 		
 		$this->mostrarVista();
+	}
+	
+	function buscar(){
+		$queryString = $_REQUEST['qs'];
+		
 	}
 }
 ?>

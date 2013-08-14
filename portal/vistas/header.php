@@ -76,7 +76,7 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		}
 		
 		
-		#pagina{ width:995px; text-align: left; display:inline-block; margin-top: 23px; }
+		#pagina{ width:995px; text-align: left; display:inline-block; }
 		
 		#contenido_derecha{display:inline-block; vertical-align:top; width:720px; margin-left:32px;}
 		
@@ -185,6 +185,12 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			
 		}
 		
+		/*
+		.cse input.gsc-search-button, input.gsc-search-button{
+			background: none !important;border: none !important;
+			background-image:url(<?php echo $WEB_BASE; ?>imagenes/search_btn.png) !important;   
+			background-repeat:no-repeat !important; width: 22px !important; height: 21px; vertical-align: top;
+		} */
 	</style>
 	<script>
 		$(function(){
@@ -223,6 +229,12 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 	<script type="text/javascript">stLight.options({publisher: "ur-56975a85-9c7a-18de-9afd-481c96c13a3b", doNotHash: false, doNotCopy: false, hashAddressBar: true,servicePopup:true});</script>
 	<title><?php echo $_PETICION->controlador.'/'.$_PETICION->accion; ?></title>
+	
+	<style>
+		.gsc-control-cse{
+			background-color:#f6f6f6 !important; border:none !important;
+		}
+	</style>
 	</head>
 <body>
 	
@@ -248,19 +260,55 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_googleplus_hcount' displayText=''></span>				
 	</div>
 	
-	<form method="get" action="http://www.google.com/search">
+	<div style="position:absolute; top: 140px;right: 198px; width: 223px; background-image: url(<?php echo $WEB_BASE; ?>imagenes/bg_social.png); background-repeat: no-repeat; padding-left: 18px;">
+		<script>			
+			$(function(){
+				$('.gsc-search-button').live('click',function(){
+					var val = $('#gsc-i-id1').val();
+					if (val != '' ) {
+						$('#contenido').hide();
+					}
+					
+					
+					// $("#contenido_pagina").remove()
+				});
+				
+				$('.gsc-clear-button').live('click',function(){
+					$('#contenido').show();
+				});
+				
+				$('.gsc-input').live('keyup',function(event){
+					if (event.which == 13) {
+						var val = $('#gsc-i-id1').val();
+						if (val != '' ) {
+							$('#contenido').hide();
+						}
+					 }					
+				});
+				
+			});
+			
+  (function() {
+    var cx = '017750272893093256569:w-zkixdiv00';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+  
+		
+</script>
+<gcse:searchbox></gcse:searchbox>
+	</div>
+	<!--form method="get" action="<?php //echo $APP_PATH.$_idioma; ?>/paginas/buscar" style="position:absolute; top: 140px;right: 198px;" >
 
-		<div style="border:1px solid black;padding:4px;width:20em;">
-		<table border="0" cellpadding="0">
-		<tr><td>
-		<input type="text"   name="q" size="25"
-		 maxlength="255" value="" />
-		<input type="submit" value="Google Search" /></td></tr>
-		<tr><td align="center" style="font-size:75%">
-		<input type="checkbox"  name="sitesearch"
-		 value="mymazatlansouvenirs.com/demo/es/inicio" checked /> only search Ask Dave Taylor<br />
-		</td></tr></table>
+		<div style="">
+			<input type="text"   name="qs" size="25" maxlength="255" value="" style="background: none;background-image:url(<?php //echo $WEB_BASE; ?>imagenes/searchbox_input.png); border: none;background-repeat: no-repeat;width: 135px;height: 21px;vertical-align: top; margin-right: -8px;" />
+			<input type="submit" value="" style="background: none;background-image:url(<?php //echo $WEB_BASE; ?>imagenes/search_btn.png);  border: none; background-repeat:no-repeat; width: 22px; height: 21px; vertical-align: top;" />
 		</div>
 
-		</form>
+	</form-->
 </div>

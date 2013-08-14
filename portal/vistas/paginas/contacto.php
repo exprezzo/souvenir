@@ -103,13 +103,13 @@ margin-bottom: 34px;
 
 		
 		
-	form{padding:50px 27px 26px 27px; background-color: #dedede; border-radius: 13px; display:inline-block;  position:relative;
+	#form_contacto {padding:50px 27px 26px 27px; background-color: #dedede; border-radius: 13px; display:inline-block;  position:relative;
 	box-shadow: 0px 3px 0px 0px rgba(119, 119, 119, 0.75);
 	-moz-box-shadow:  0px 3px 0px 0px rgba(119, 119, 119, 0.75);
 	-webkit-box-shadow: 0px 3px 0px 0px rgba(119, 119, 119, 0.75);}
-	form input{height:53px;}
-	form textarea{height:153px; padding-top:20px;}
-	form input, form textarea{
+	#form_contacto input{height:53px;}
+	#form_contacto textarea{height:153px; padding-top:20px;}
+	#form_contacto input, #form_contacto  textarea{
 		display:block; width: 337px; font-family:'Mark Sans'; font-size:18.6px; 
 		-webkit-border-radius: 5px;padding-left:20px;-moz-border-radius: 5px;
 		border-radius: 5px;border:none;margin-bottom:26px;	

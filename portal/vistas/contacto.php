@@ -1,5 +1,6 @@
 
 	<?php include '../portal/vistas/header.php'; ?>
+	<gcse:searchresults></gcse:searchresults>
 	<div id="contenido">
 		<div id="pagina">
 			

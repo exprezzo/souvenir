@@ -11,6 +11,7 @@
 	background-repeat: no-repeat, no-repeat;
 }
 </style>
+	<gcse:searchresults></gcse:searchresults>
 	<div id="contenido">
 		<div id="pagina">
 			<ul id="menu_categorias">

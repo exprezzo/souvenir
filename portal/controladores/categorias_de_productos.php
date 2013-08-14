@@ -12,12 +12,9 @@ class categorias_de_productos extends Controlador{
 		for($i=0; $i<sizeof($campos); $i++){
 			$obj[$campos[$i]]='';
 		}
-		$vista->datos=$obj;		
-		
+		$vista->datos=$obj;				
 		global $_PETICION;
-		$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
-		
-		
+		$vista->mostrar('/'.$_PETICION->controlador.'/edicion');		
 	}
 	
 	function guardar(){
