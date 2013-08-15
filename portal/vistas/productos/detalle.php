@@ -107,9 +107,9 @@ jQuery(document).ready(function($) {
 		<span class='st_email_hcount' displayText=''></span>
 		<br /><br />
 		
-		<span style="color:#888888; max-width: 274px; display: inline-block;">
+		<h1 style="color:#888888; max-width: 274px; display: inline-block;">
 			<?php echo $descripcion; ?>
-		</span>
+		</h1>
 		
 		
 	</div>
