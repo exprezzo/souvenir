@@ -266,12 +266,37 @@ min-width:0 !important;
 		}
 		
 	</style>
+	<?php 
+		if ( $_PETICION->controlador == 'productos' && $_PETICION->accion=='ver' && isset($this->categoriaActual ) ){
+			$categoriaActual  = $this->categoriaActual;				
+			$rutaEs		=$APP_PATH.'es/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
+			$rutaIng	=$APP_PATH.'en/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
+		}else if ( $_PETICION->controlador == 'publicaciones' && $_PETICION->accion=='mostrar' && isset($this->categoriaActual ) ){
+			$categoriaActual  = $this->categoriaActual;				
+			$rutaEs		=$APP_PATH.'es/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
+			$rutaIng	=$APP_PATH.'en/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);	
+		}
+		else{
+			$rutaEs		= $APP_PATH.'es/'.$_PETICION->controlador.'/'.$_PETICION->accion; 
+			$rutaIng	= $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion;
+		}			
+		
+		$ruta_home = $APP_PATH.$_idioma.'/inicio';
+	?>
+	
+	<script>
+		$(function(){
+			$('#btn_esp').attr('href','<?php echo $rutaEs; ?>');
+			$('#btn_ing').attr('href','<?php echo $rutaIng; ?>');
+			$('#logo').attr('href','<?php echo $ruta_home; ?>');
+		});
+	</script>
 	</head>
 <body>
 	
 
 <div id="header">
-	<a href="<?php echo $APP_PATH.$_idioma.'/inicio'; ?>" id="logo"><img src="<?php echo $WEB_BASE.'imagenes/logo_portal.png'; ?>" alt="My Mazatlan Souvenir" width="226" height="75" > </a>
+	<a href="#" id="logo"><img src="<?php echo $WEB_BASE.'imagenes/logo_portal.png'; ?>" alt="My Mazatlan Souvenir" width="226" height="75" > </a>
 	<ul id="menu">
 		<?php 
 		$ubicacion = $_PETICION->controlador.'/'.$_PETICION->accion;		
@@ -282,27 +307,9 @@ min-width:0 !important;
 		?>		
 	</ul>
 	<div id="botones_idioma">
-		<?php 
-			if ( $_PETICION->controlador == 'productos' && $_PETICION->accion=='ver' && isset($this->categoriaActual ) ){
-				$categoriaActual  = $this->categoriaActual;				
-				$rutaEs		=$APP_PATH.'es/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
-				$rutaIng	=$APP_PATH.'en/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
-			}else if ( $_PETICION->controlador == 'publicaciones' && $_PETICION->accion=='mostrar' && isset($this->categoriaActual ) ){
-				$categoriaActual  = $this->categoriaActual;				
-				$rutaEs		=$APP_PATH.'es/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
-				$rutaIng	=$APP_PATH.'en/portal/publicaciones/mostrar/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
-	
-				// $rutaEs		=$APP_PATH.'es/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre']); 
-				// $rutaIng	=$APP_PATH.'en/portal/productos/ver/'.$categoriaActual['id'].'/'.str_replace(" ",'_',$categoriaActual['nombre_en']);		
-			}
-			else{
-				$rutaEs		= $APP_PATH.'es/'.$_PETICION->controlador.'/'.$_PETICION->accion; 
-				$rutaIng	= $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion;
-			}
-			
-		?>
-		<a href="<?php echo  $rutaEs ?>" id="btn_esp"></a>
-		<a href="<?php echo  $rutaIng ?>" id="btn_ing"></a>
+		
+		<a href="#" id="btn_esp"></a>
+		<a href="#" id="btn_ing"></a>
 	</div>
 	<div class="wrap_social">
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_facebook_hcount' displayText='Facebook'></span>
