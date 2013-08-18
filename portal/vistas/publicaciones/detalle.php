@@ -4,15 +4,17 @@
 	
 	$rutaEs		=$APP_PATH.'es/portal/publicaciones/detalle/'.$this->publicacion['id'].'/'.str_replace(" ",'_',$this->publicacion['titulo'.$sufijo]); 
 	$rutaEn		=$APP_PATH.'en/portal/publicaciones/detalle/'.$this->publicacion['id'].'/'.str_replace(" ",'_',$this->publicacion['titulo'.$sufijo]); 
+	
+	$nombre = $this->publicacion['titulo'.$sufijo];
 ?>
 
 
 <!-- ****************************** -->
-<div style="text-align:center;">
+<h2 id="titulo_categoria" style="float:left; color:#9eb612;font-size:17.21px;  font-family:'Tahoma';margin-bottom:3px;"><?php   echo  $nombre; ?></h2> 
+<div style=" float:right; display:inline-block;">
 	<div style="display:inline-block; vertical-align:top; margin-left:25px; position:relative;">		
-			<h2 id="titulo_categoria" style="color:#9eb612;font-size:17.21px;  font-family:'Tahoma';margin-bottom:3px;"><?php  // echo  $nombre; ?></h2> 
-
 			
+
 			<span class='st_facebook_hcount' displayText='Facebook'></span>
 			<span class='st_twitter_hcount' displayText='Tweet'></span>		
 			<span class='st_googleplus_hcount' displayText=''></span>		
@@ -27,6 +29,7 @@
 			
 	</div>
 </div>
+<div style="clear:both"></div>
 	
 
 <!-- Start WOWSlider.com HEAD section -->
@@ -64,12 +67,10 @@ jQuery(document).ready(function($) {
 <div class="producto">		
 	<?php
 	if ( empty($this->imagenes['datos']) ){
-		$this->imagenes['datos'][] = array('imagen' => $imagen);
-		// echo '<img width="300" height="220" src="'.$imagen.'" style="float:left;" />';
+		$this->imagenes['datos'][] = array('imagen' => $imagen);		
 	}
 	?>
-	<!-- Start WOWSlider.com BODY section -->
-		
+	<!-- Start WOWSlider.com BODY section -->		
 		<div id="wowslider-container3" style="">
 			<div class="ws_images">
 				<ul>

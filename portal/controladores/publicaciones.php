@@ -45,6 +45,11 @@ class publicaciones extends Controlador{
 		$cats=$mod->buscar( array() );		
 		$vista->categorias=$cats['datos'];
 		
+		$vista->pagina = array(
+			'titulo' => $vista->publicacion['titulo'],
+			'titulo_en' => $vista->publicacion['titulo_en']
+		);
+		
 		$this->mostrarVista();
 		
 	}

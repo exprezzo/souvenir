@@ -207,21 +207,6 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			}		
 		});
 	</script>	
-	<?php 	
-		//Carga archivos css (Por hacer)
-		/*if ( !isset($this->estilos) ) $this->estilos = array();
-		foreach($this->estilos as css){
-			echo '<script src="'.$APP_PATH.'web/'.$css.'" ></script>';
-		}*/
-		
-		
-		//Carga archivos js (Por hacer)		
-		/*if ( !isset($this->scripts) ) $this->scripts = array();
-		foreach($this->scripts as js){
-			echo '<script src="'.$APP_PATH.'web/'.$js.'" ></script>';
-		}*/
-		
-	?>
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_BASE; ?>css/estilos.css" />
 	
@@ -281,7 +266,7 @@ min-width:0 !important;
 			$rutaIng	= $APP_PATH.'en/'.$_PETICION->controlador.'/'.$_PETICION->accion;
 		}			
 		
-		$ruta_home = $APP_PATH.$_idioma.'/inicio';
+		$ruta_home = $APP_PATH.$_idioma.'/paginas/inicio';
 	?>
 	
 	<script>
@@ -296,7 +281,7 @@ min-width:0 !important;
 	
 
 <div id="header">
-	<a href="#" id="logo"><img src="<?php echo $WEB_BASE.'imagenes/logo_portal.png'; ?>" alt="My Mazatlan Souvenir" width="226" height="75" > </a>
+	<a href="#" rel="nofollow" id="logo"><img src="<?php echo $WEB_BASE.'imagenes/logo_portal.png'; ?>" alt="My Mazatlan Souvenir" width="226" height="75" > </a>
 	<ul id="menu">
 		<?php 
 		$ubicacion = $_PETICION->controlador.'/'.$_PETICION->accion;		
@@ -308,8 +293,8 @@ min-width:0 !important;
 	</ul>
 	<div id="botones_idioma">
 		
-		<a href="#" id="btn_esp"></a>
-		<a href="#" id="btn_ing"></a>
+		<a href="#" rel="nofollow" id="btn_esp"></a>
+		<a href="#" rel="nofollow" id="btn_ing"></a>
 	</div>
 	<div class="wrap_social">
 		<span st_url='http://mymazatlansouvenirs.com<?php echo $APP_PATH.$_idioma.'/inicio'; ?>' class='st_facebook_hcount' displayText='Facebook'></span>
