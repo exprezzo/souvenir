@@ -79,6 +79,19 @@ class productos extends Controlador{
 			'titulo_en' => $vista->producto['nombre_en']
 		);
 		
+		$descripcion = array(
+			'descripcion' => $vista->producto['descripcion'],
+			'descripcion_en' => $vista->producto['descripcion_en']
+		);
+		
+		if ( empty($_GET['idioma_request']) ){	
+			$idioma =substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2); 			
+		}else{
+			$_idioma =  $_GET['idioma_request'];
+		}
+		if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
+		$sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
+		$vista->pagina['description']=$descripcion['descripcion'.$_sufijo];		
 		$vista->imagenes = $imagenes;
 		$this->mostrarVista();
 		

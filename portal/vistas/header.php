@@ -4,13 +4,11 @@ if ( empty($_GET['idioma_request']) ){
 }else{
 	$_idioma =  $_GET['idioma_request'];
 }
+if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
+$sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 
 $pagina['footer']='Texto footer Texto footer  Texto footer  Texto footer ';
 $pagina['footer_en']='Footer text Footer text  Footer text Footer text Footer text Footer text ';
-
-if ($_idioma!='es' && $_idioma!='en') $_idioma='es';
-
-$sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 ?>
 
 <!doctype html>
@@ -228,12 +226,19 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 	<?php
 		if ( isset($this->pagina) ){
 			$titulo = !empty($this->pagina['titulo'.$sufijo])? $this->pagina['titulo'.$sufijo] :  $_PETICION->controlador.'/'.$_PETICION->accion;
+			
+			if ( isset($this->pagina['description']) ){
+				
+				echo '<meta name="description" content="'.$this->pagina['description'].'">';
+			}
 		}else{
 			$titulo = $_PETICION->controlador.'/'.$_PETICION->accion;
 		}
 		
 	?>
 	<title><?php echo $titulo ?></title>
+	
+	
 	<style>
 		.gsc-control-cse{
 			background-color:#f6f6f6 !important; border:none !important;
