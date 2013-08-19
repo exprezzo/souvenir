@@ -47,6 +47,7 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			background-repeat: no-repeat,no-repeat;		
 			background-position: bottom left,  bottom right;
 			min-height:766px; text-align:center;
+			padding-top:23px;
 		}
 		
 		body{
@@ -185,12 +186,15 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			
 		}
 		
-		/*
+		
 		.cse input.gsc-search-button, input.gsc-search-button{
+			
 			background: none !important;border: none !important;
 			background-image:url(<?php echo $WEB_BASE; ?>imagenes/search_btn.png) !important;   
-			background-repeat:no-repeat !important; width: 22px !important; height: 21px; vertical-align: top;
-		} */
+			background-repeat:no-repeat !important; width: 22px !important; height: 21px;
+			vertical-align: top;
+			height: 21px;
+		} 
 	</style>
 	<script>
 		$(function(){
@@ -207,6 +211,14 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 			}		
 		});
 	</script>	
+	<!--  INICIA SPHIDEr -->
+	
+	<link type="text/css" rel="stylesheet" href="<?php echo $APP_PATH.'sphider-1.3.6/'; ?>templates/standard/search.css">
+	<!-- suggest script -->
+	<style type="text/css">@import url("<?php echo $APP_PATH.'sphider-1.3.6/'; ?>include/js_suggest/SuggestFramework.css");</style>
+	<script type="text/javascript" src="<?php echo $APP_PATH.'sphider-1.3.6/'; ?>include/js_suggest/SuggestFramework.js"></script>
+	<script type="text/javascript">window.onload = initializeSuggestFramework;</script>
+	<!--  FIN SPHIDER -->
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_BASE; ?>css/estilos.css" />
 	
@@ -219,25 +231,35 @@ $sufijo = ($_idioma=='es')? '' : '_'.$_idioma;
 		}else{
 			$titulo = $_PETICION->controlador.'/'.$_PETICION->accion;
 		}
+		
 	?>
 	<title><?php echo $titulo ?></title>
 	<style>
 		.gsc-control-cse{
 			background-color:#f6f6f6 !important; border:none !important;
 		}
-		form.gsc-search-box{ padding:10px 0px 20px 0px !important; }
+		
+		form.gsc-search-box{ padding:10px 0px 20px 0px !important; 			
+			position: absolute;
+			top: 140px;
+			right: 198px;
+			width: 223px;
+			background-image: url(<?php echo $WEB_BASE; ?>imagenes/bg_social.png);
+			background-repeat: no-repeat;
+			padding-left: 18px;
+		}
 			
 		td.gsc-input{
 			left: 45px;
 			position: relative;
-			width: 121px;
+			width: 121px !important;
 			display: inline-block !important
 		}
 		input.gsc-input{
 			background-image:none !important;  background:none !important; border:none !important;
 			background-image:url(<?php echo $WEB_BASE; ?>imagenes/searchbox_input.png) !important; background-repeat:no-repeat !important;
-			color:#333333 !important; width:121px !important; height: 13px !important;
-			;
+			color:#333333 !important; width:121px !important; height: 20px !important;
+			 vertical-align: top;
 		}
 		input.gsc-search-button {
 			background:none !important; border:none !important; color:transparent !important;  background-repeat:no-repeat !important;
@@ -330,27 +352,30 @@ min-width:0 !important;
 				
 			});
 			
-  (function() {
-    var cx = '017750272893093256569:w-zkixdiv00';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+  // (function() {
+    // var cx = '017750272893093256569:w-zkixdiv00';
+    // var gcse = document.createElement('script');
+    // gcse.type = 'text/javascript';
+    // gcse.async = true;
+    // gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        // '//www.google.com/cse/cse.js?cx=' + cx;
+    // var s = document.getElementsByTagName('script')[0];
+    // s.parentNode.insertBefore(gcse, s);
+  // })();
   
 		
 </script>
-<gcse:searchbox></gcse:searchbox>
-	</div>
-	<!--form method="get" action="<?php //echo $APP_PATH.$_idioma; ?>/paginas/buscar" style="position:absolute; top: 140px;right: 198px;" >
 
-		<div style="">
-			<input type="text"   name="qs" size="25" maxlength="255" value="" style="background: none;background-image:url(<?php //echo $WEB_BASE; ?>imagenes/searchbox_input.png); border: none;background-repeat: no-repeat;width: 135px;height: 21px;vertical-align: top; margin-right: -8px;" />
-			<input type="submit" value="" style="background: none;background-image:url(<?php //echo $WEB_BASE; ?>imagenes/search_btn.png);  border: none; background-repeat:no-repeat; width: 22px; height: 21px; vertical-align: top;" />
+	</div>
+	 <?php  // $this->mostrar('/portal/paginas/search_sphider'); ?>
+	<form method="GET" class="gsc-search-box" action="<?php echo $APP_PATH.$_idioma; ?>/paginas/search_sphider" style="text-align: center;" >
+
+		<div style="display:inline-block;">
+			<input type="text"  class="gsc-input" name="query" size="25" maxlength="255" value="<?php echo empty($_GET['query'])? '' : $_GET['query']; ?>" style="margin-right:-5px;padding-left:10px;" />
+			<input type="hidden"   name="search" size="25" maxlength="255" value="1" style="" />
+			
+			<input type="submit" class="gsc-search-button" value="" style="" />
 		</div>
 
-	</form-->
+	</form>
 </div>

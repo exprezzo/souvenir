@@ -5,6 +5,8 @@
 	$mysql_host = "localhost";
 	$mysql_table_prefix = "";
 
+
+
 	$success = mysql_pconnect ($mysql_host, $mysql_user, $mysql_password);
 	if (!$success)
 		die ("<b>Cannot connect to database, check if username, password and host are correct.</b>");
