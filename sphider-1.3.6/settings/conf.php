@@ -153,10 +153,10 @@ $suggest_enabled		= 1;
 $suggest_history		= 1;
 
 // Search for suggestions in keywords 
-$suggest_keywords		= 0;
+$suggest_keywords		= 1;
 
 // Search for suggestions in phrases 
-$suggest_phrases		= 0;
+$suggest_phrases		= 1;
 
 // Limit number of suggestions 
 $suggest_rows		= 10;
