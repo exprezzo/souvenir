@@ -37,6 +37,7 @@
 		 
 		 var tabId='#'+config.tab.id;
 		 $(tabId+' [name="precio"]').wijinputnumber({type:'currency', decimalPlaces: 2, increment: 1, showSpinner: true});
+		 $(tabId+' [name="precio_en"]').wijinputnumber({type:'currency', decimalPlaces: 2, increment: 1, showSpinner: true});
 		 
 		  var paramsDetalle={
 			tabId:tabId,
@@ -69,8 +70,8 @@
 				for (var i=0; i<res.imagenes.length; i++){
 					url=kore.url_base+'web/imagenes/'+res.imagenes[i].base+res.imagenes[i].nombre;
 					ruta=res.imagenes[i].base+res.imagenes[i].nombre;
-					imagen='<img ruta="'+ruta+'" width="100" height="100" src="timthumb.php?src='+url+'&h=150" base="'+res.imagenes[i].base+'" />';
-					// alert(imagen);
+					imagen='<img nombre="'+res.imagenes[i].nombre+'" ruta="'+ruta+'" width="100" height="100" src="timthumb.php?src='+url+'&h=150" base="'+res.imagenes[i].base+'" />';
+					
 					$(divImagenes).append(imagen);
 					
 					
@@ -151,6 +152,10 @@
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Descripcion_en:</label>
 	<input type="text" name="descripcion_en" class="txt_descripcion_en" value="<?php echo $this->datos['descripcion_en']; ?>" style="width:500px;" />
+</div>
+<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+	<label style="">Galeria:</label>
+	<input type="text" name="galeria" class="txt_orden" value="<?php echo $this->datos['galeria']; ?>" style="width:500px;" />
 </div>
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Orden:</label>

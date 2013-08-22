@@ -2,7 +2,7 @@
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/categorias_publicacion_modelo.php';
 class categorias_publicacion extends Controlador{
 	var $modelo="categorias_publicacion";
-	var $campos=array('id','nombre','imagen','descripcion','nombre_en','descripcion_en','orden');
+	var $campos=array('id','nombre','imagen','descripcion','nombre_en','descripcion_en','orden','target');
 	var $pk="id";
 	var $nombre="categorias_publicacion";
 	

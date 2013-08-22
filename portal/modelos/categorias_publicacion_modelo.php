@@ -1,7 +1,7 @@
 <?php
 class categorias_publicacionModelo extends Modelo{
 	var $tabla="portal_categoria_publicacion";
-	var $campos=array('id','nombre','imagen','descripcion','nombre_en','descripcion_en','orden');
+	var $campos=array('id','nombre','imagen','descripcion','nombre_en','descripcion_en','orden', 'target');
 	var $pk="id";
 	
 	function nuevo($params){

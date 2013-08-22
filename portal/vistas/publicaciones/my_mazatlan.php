@@ -85,7 +85,7 @@
 			// $link=
 			$titulo=$prod['nombre'.$sufijo];
 			$descripcion=$prod['descripcion'.$sufijo];
-			$imagen=(empty($prod['imagen']) )?  $WEB_BASE.'imagenes/no-image.jpg' : $WEB_BASE.'imagenes/'.$prod['imagen'];
+			$imagen=(empty($prod['imagen']) )?  $WEB_BASE.'imagenes/no-image.jpg' : $WEB_BASE.$prod['imagen'];
 			
 			if ($_idioma=='en'){
 				// $target=$APP_PATH.$_idioma.'/portal/products/view/'.$categoriaActual['id'].'/'.str_replace(' ','_',$titulo);
@@ -97,7 +97,7 @@
 			// echo '<li><a href="'.$target.'"><img width="50" height="50" src="'.$imagen.'" /><span>'.$titulo.'</span></a></li>';
 		?>	
 			<li class="caja_efecto" style=" margin-right:22px; margin-bottom:19px;">
-				<a href="<?php echo $APP_PATH.$_idioma.'/portal/publicaciones/mostrar/'.$prod['id'].'/'.str_replace(' ','_',$prod['nombre'.$sufijo]); ?>">
+				<a href="<?php echo $APP_PATH.$_idioma.'/portal/'.$prod['target'].'/'.str_replace(' ','_',$prod['nombre'.$sufijo]); ?>">
 				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius:8px; margin-bottom: 7px;"/>
 				<a href="#" style="text-decoration:underline;"></a>
 				<div style="background-color:#e8e8e8;  padding:5px 6px 7px 9px; border-top:0;position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">

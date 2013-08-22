@@ -61,6 +61,10 @@
 	<input type="text" name="descripcion_en" class="txt_descripcion_en" value="<?php echo $this->datos['descripcion_en']; ?>" style="width:500px;" />
 </div>
 <div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+	<label style="">Target:</label>
+	<input type="text" name="target" class="txt_orden" value="<?php echo $this->datos['target']; ?>" style="width:500px;" />
+</div>
+<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
 	<label style="">Orden:</label>
 	<input type="text" name="orden" class="txt_orden" value="<?php echo $this->datos['orden']; ?>" style="width:500px;" />
 </div>

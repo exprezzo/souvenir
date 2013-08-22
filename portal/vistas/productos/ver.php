@@ -113,7 +113,7 @@ if ( !empty($this->totalProductos) ){
 				<a href="#" style="text-decoration:underline;"></a>
 				<div style="background-color:#e8e8e8;  padding:12px 6px 7px 9px; border:#f3f3f3 2px solid; border-top:0;">
 					<div style="float:left; color:#888888; font-family:'Mark Sans'; font-size:14.19px;"><?php echo $titulo; ?></div>
-					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;">$<?php echo $precio; ?></div>
+					<div style="float:right; color:#faa434; font-family:'Tahoma'; font-size:13.39px; font-weight:bold;"><?php echo $precio; ?></div>
 					<div style="clear:both;"></div>
 				</div>
 				</a>

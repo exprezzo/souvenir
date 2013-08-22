@@ -1,7 +1,7 @@
 <?php
 class productoModelo extends Modelo{
 	var $tabla="portal_producto";
-	var $campos=array('id','codigo','nombre','descripcion','precio','imagen','nombre_en','descripcion_en','orden');
+	var $campos=array('id','codigo','nombre','descripcion','precio','imagen','nombre_en','descripcion_en','orden','galeria');
 	var $pk="id";
 	
 	function nuevo($params){

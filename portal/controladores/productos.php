@@ -5,7 +5,7 @@ require_once $APPS_PATH.$_PETICION->modulo.'/modelos/categoria_producto_modelo.p
 
 class productos extends Controlador{
 	var $modelo="producto";
-	var $campos=array('id','codigo','nombre','descripcion','precio','imagen','nombre_en','descripcion_en','orden','fk_categoria','precio_en');
+	var $campos=array('id','codigo','nombre','descripcion','precio','imagen','nombre_en','descripcion_en','orden','fk_categoria','precio_en','galeria');
 	var $pk="id";
 	var $nombre="productos";
 	

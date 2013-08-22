@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>fade</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>La Marina</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/studio/</ImageTemplate>
+            <ImageTemplateName>Studio</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/la_marina/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/la_marina</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>33</SlideshowDelay>
+            <SlideshowDuration>36</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>studio</TemplateName>
+            <ThumbAlign>right</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/2841362.jpg</url>
+                <title>2841362</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/3899484.jpg</url>
+                <title>3899484</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/aerea-marina.jpg</url>
+                <title>aerea-marina</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/condominio-venta_MLM-F-4322721405_052013.jpg</url>
+                <title>condominio-venta_MLM-F-4322721405_052013</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/descarga.jpg</url>
+                <title>descarga</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/El-Cid-Marina-Beach-new-001.jpg</url>
+                <title>El-Cid-Marina-Beach-new-001</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/item-7.jpg</url>
+                <title>item-7</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/look-at-the-views-from-the-el-cid-hotel-mazatlan-mexico+1152_12895865174-tpfil02aw-18191.jpg</url>
+                <title>look-at-the-views-from-the-el-cid-hotel-mazatlan-mexico+1152_12895865174-tpfil02aw-18191</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/Marina Mazatlan large.jpg</url>
+                <title>Marina Mazatlan large</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/marina-_dsc6581.jpg</url>
+                <title>marina-_dsc6581</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/mazatlan after christmas 012.JPG</url>
+                <title>mazatlan after christmas 012</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/mg_8000.jpg</url>
+                <title>mg_8000</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/la marina/walkway-to-the-marina-mazatlan-mexico+1152_12895864553-tpfil02aw-3785.jpg</url>
+                <title>walkway-to-the-marina-mazatlan-mexico+1152_12895864553-tpfil02aw-3785</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

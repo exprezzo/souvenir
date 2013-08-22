@@ -18,12 +18,11 @@ $descripcion = $this->producto['descripcion'.$sufijo];
 ?>
 
 <!-- Start WOWSlider.com HEAD section -->
-<link rel="stylesheet" type="text/css" href="<?php echo $WEB_BASE; ?>engine2/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $WEB_BASE; ?>imagenes/articulos/souvenir/adornos/engine2/style.css" />
 
-<script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine2/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $WEB_BASE; ?>imagenes/articulos/souvenir/adornos/engine2/jquery.js"></script>
 
-<script type="text/javascript" src="<?php echo $WEB_BASE; ?>js/libs/carouFredSel/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="<?php echo $WEB_BASE; ?>js/libs/carouFredSel/jquery.carouFredS.js"></script>
+
 
 
 <!-- End WOWSlider.com HEAD section -->
@@ -75,7 +74,7 @@ jQuery(document).ready(function($) {
 					$imagenes = $this->imagenes['datos'];
 					foreach($imagenes as $image){
 					?>
-						<li><a href="#"><img width="320" height="220" src="<?php echo $WEB_BASE.'imagenes/'.$image['imagen']; ?>" alt="" title="" id="wows2_<?php echo $numero; ?>"/></a></li>
+						<li><a href="#"><img width="320" height="220" src="<?php echo $WEB_BASE.'imagenes/articulos/'.$this->producto['galeria'].'data2/images/'.$image['imagen']; ?>" alt="" title="" id="wows2_<?php echo $numero; ?>"/></a></li>
 					<?php
 						$numero++;
 					}
@@ -86,7 +85,7 @@ jQuery(document).ready(function($) {
 				<?php					
 					foreach($imagenes as $image){
 					?>					
-						<a href="#" title=""><img src="<?php echo $WEB_BASE.'imagenes/'.$image['imagen']; ?>" alt="" width="79" height="45" /></a>
+						<a href="#" title=""><img src="<?php echo $WEB_BASE.'imagenes/articulos/'.$this->producto['galeria'].'data2/tooltips/'.$image['imagen']; ?>" alt="" width="79" height="45" /></a>
 					<?php						
 					}
 				?>							
@@ -97,9 +96,9 @@ jQuery(document).ready(function($) {
 	</div>
 	<!-- End WOWSlider.com BODY section -->
 	<div style="display:inline-block; vertical-align:top; margin-left:25px; position:relative;">		
-		<h2 id="titulo_categoria" style="color:#9eb612;font-size:17.21px;  font-family:'Tahoma';margin-bottom:3px;"><?php  echo  $nombre; ?></h2> 
+		<h2 id="titulo_categoria" style="color:#9eb612;font-size:17.21px;  font-family:'Tahoma';margin-bottom:3px;"><?php  echo  utf8_decode($nombre); ?></h2> 
 		<h3 style="color:#888888; margin-bottom:10px;">Codigo: <?php echo $codigo; ?> </h3>
-		<h3 style="position:absolute; display:inline-block; right:0; color: #faa434;font-family: 'Tahoma';font-size: 32px;top:0; ">$<?php echo $precio; ?> </h3>
+		<h3 style="position:absolute; display:inline-block; right:0; color: #faa434;font-family: 'Tahoma';font-size: 32px;top:0; "><?php echo $precio; ?> </h3>
 		
 		<span class='st_facebook_hcount' displayText='Facebook'></span>
 		<span class='st_twitter_hcount' displayText='Tweet'></span>		
@@ -108,15 +107,13 @@ jQuery(document).ready(function($) {
 		<br /><br />
 		
 		<h1 style="color:#888888; max-width: 274px; display: inline-block;">
-			<?php echo $descripcion; ?>
-		</h1>
-		
-		
+			<?php echo utf8_decode($descripcion); ?>
+		</h1>		
 	</div>
 
 
-<script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine2/wowslider.js"></script>
-<script type="text/javascript" src="<?php echo $WEB_BASE; ?>engine2/script.js"></script>
+<script type="text/javascript" src="<?php echo $WEB_BASE; ?>imagenes/articulos/souvenir/adornos/engine2/wowslider.js"></script>
+<script type="text/javascript" src="<?php echo $WEB_BASE; ?>imagenes/articulos/souvenir/adornos/engine2/script.js"></script>
 
 
 

@@ -31,7 +31,7 @@ var ImagenesProducto=function (tabId){
 	};
 	
 	this.configurarGrid=function(tabId, articulos){
-		// alert(tabId);
+		
 		
 		var fields=[			
 			{ name: "id",default:0},			
@@ -206,7 +206,7 @@ var ImagenesProducto=function (tabId){
 		} else if ( nextCell>=this.numCols || saltar){
 			nextCell=0;
 			if (mantenerColumna){
-				// alert(' mantenerColumna: '+ cellIndex);
+				
 				nextCell=cellIndex;
 			}
 			//ir al registro siguiente, cambiar de pagina o agregar nuevo registro,
@@ -218,8 +218,7 @@ var ImagenesProducto=function (tabId){
 			dataItemIndex = row.dataItemIndex;
 			var ip= (pageSize * (pageIndex+1) )-1;
 			// var index = collection.indexOf(0, 0);
-			// alert(index);
-			//alert("pageSize: "+pageSize+" pageIndex:" + pageIndex + " dataItemIndex: " + dataItemIndex + ' ip:' + ip);			
+			
 			if ( (dataItemIndex+1) == data.length ){
 				//esta en el ultimo registro de la ultima pagina
 				//agregar nuevo, si esta al final de la pagina, despues de agregar registro, mover a la siguiente pagina
@@ -270,7 +269,7 @@ var ImagenesProducto=function (tabId){
 	
 	
 	this.nuevo=function(imagen){	
-		alert(imagen);
+		
 		this.padre.editado=true;
 		var rec={};
 		$.each( this.fields, function(indexInArray, valueOfElement){
@@ -301,13 +300,13 @@ var ImagenesProducto=function (tabId){
 	
 	
 	this.seleccionarImagenes=function(){
-		// alert("ea, seleccionar imagenes");
+		
 		var imagenes = this.selector.find('img.seleccionado');
 		// console.log("seleccionadas"); console.log(imagenes); 
-		var ruta="";
+		var nombre="";
 		for(var i=0; i<imagenes.length; i++){
-			ruta = $(imagenes[i]).attr('ruta');
-			this.nuevo(ruta);
+			nombre = $(imagenes[i]).attr('nombre');
+			this.nuevo(nombre);
 		}
 		$(this.selector).wijdialog('close');
 	}

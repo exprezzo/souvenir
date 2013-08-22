@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>fade</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>nuevo mazatlan</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/studio/</ImageTemplate>
+            <ImageTemplateName>Studio</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/nuevo_mazatlan/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/nuevo_mazatlan</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>33</SlideshowDelay>
+            <SlideshowDuration>36</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>studio</TemplateName>
+            <ThumbAlign>right</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/01lamazatleca11.jpg</url>
+                <title>Monumento a la Pulmonia</title>
+                <description>La pulmonia es uno de los medios de transporte preferidos por los turistas</description>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/4.jpg</url>
+                <title>4</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/7483373988_470bde2591_z.jpg</url>
+                <title>7483373988_470bde2591_z</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/departamento-en-venta-en-nuevo-mazatlan_MLM-O-4229666972_042013.jpg</url>
+                <title>departamento-en-venta-en-nuevo-mazatlan_MLM-O-4229666972_042013</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/item2.size.pueblo-bonito-emerald-bay-nuevo-mazatl-n-mazatl-n-mexico-102423-1.jpg</url>
+                <title>item2.size.pueblo-bonito-emerald-bay-nuevo-mazatl-n-mazatl-n-mexico-102423-1</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/mdrthdr5dv4.jpg</url>
+                <title>mdrthdr5dv4</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/maza5.jpg</url>
+                <title>maza5</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/mazatlan.jpg</url>
+                <title>mazatlan</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/mazatlan_real_estate_570x280_01.jpg</url>
+                <title>mazatlan_real_estate_570x280_01</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/MX13506252875445.jpg</url>
+                <title>Monumento  a Pedro Infante en olas altas</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/rfeompcb-1286504225-bg.jpg</url>
+                <title>Cerveceria el pacifico</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/nuevo mazatlán/sliderinternos-Mazatlan.jpg</url>
+                <title>sliderinternos-Mazatlan</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

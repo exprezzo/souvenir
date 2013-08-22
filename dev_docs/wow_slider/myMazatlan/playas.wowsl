@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>fade</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>slider</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/studio/</ImageTemplate>
+            <ImageTemplateName>Studio</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/playas/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/playas</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>33</SlideshowDelay>
+            <SlideshowDuration>36</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>studio</TemplateName>
+            <ThumbAlign>right</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/313_imagen.jpg</url>
+                <title>Las Flores</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/5836.jpg</url>
+                <title>5836</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/1317745857_260458485_1-TERRENO-FRENTE-A-LA-PLAYA-EN-MAZATLAN-Cerritos-Resort.jpg</url>
+                <title>Cerritos</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/3446072062_1dd0c3d288.jpg</url>
+                <title>Olas Altas</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/arton212.jpg</url>
+                <title>arton212</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/Aves-Acuaticas-Mazatlan-1.jpg</url>
+                <title>Aves-Acuaticas-Mazatlan-1</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/casa_en_condominio_en_venta_en_sabalo_cerritos_mazatlan_sinaloa_98377093887018357.jpg</url>
+                <title>Sabalo Cerritos</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/dsc_0030.jpg</url>
+                <title>dsc_0030</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/Fachada_G.jpg</url>
+                <title>Fachada_G</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/images.jpg</url>
+                <title>images</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/mazatlan sinaloa mexico - copia (3).jpg</url>
+                <title>mazatlan sinaloa mexico </title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/mazatlan.jpg</url>
+                <title>mazatlan</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/MX12209911317154.jpg</url>
+                <title>MX12209911317154</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/playa-beach-mazatlan-3_tcm55-47666.JPG</url>
+                <title>playa-beach-mazatlan-3_tcm55-47666</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/playa-cerritos (1).jpg</url>
+                <title>Cerritos</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/playa-cerritos.jpg</url>
+                <title>Cerritos</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/playas-de-mazatlan.jpg</url>
+                <title>playas-de-mazatlan</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/riu_emeraldbay_mazatlan_aerial.jpg</url>
+                <title>Emerald Bay</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/playas/safety-in-mexico-66e3ac41.jpg</url>
+                <title>playa</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

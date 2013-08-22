@@ -1,5 +1,12 @@
 
 	<?php include '../portal/vistas/header.php'; ?>
+<script>
+	$(function(){
+		
+		$('a[mtarget="publicaciones/my_mazatlan"]').addClass('activo');
+		
+	});
+</script>
 <style>
 #menu_categorias a{
 	background-image: url('<?php echo $WEB_BASE; ?>imagenes/camera.png') , url('<?php echo $WEB_BASE; ?>imagenes/menu_categoria_bg.png') !important;
@@ -19,8 +26,8 @@
 					// print_r($this->categorias);
 					foreach($this->categorias as $cat){
 						$titulo = $cat['nombre'.$sufijo];
-						$target=$APP_PATH.$_idioma.'/portal/publicaciones/mostrar/'.$cat['id'].'/'.str_replace(' ','_',$titulo);						
-						echo '<li><a  href="'.$target.'#titulo_categoria">'.$titulo.'</a></li>';					
+						$target=$APP_PATH.$_idioma.'/portal'.$cat['target'];						
+						echo '<li><a  href="'.$target.'">'.$titulo.'</a></li>';					
 					}
 				?>
 				

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>fade</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>slider</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/studio/</ImageTemplate>
+            <ImageTemplateName>Studio</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/comidas/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/comidas</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>33</SlideshowDelay>
+            <SlideshowDuration>36</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>studio</TemplateName>
+            <ThumbAlign>right</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/pozole roja 6.jpg</url>
+                <title>Pozole Rojo</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/El_tango_guacamole.jpg</url>
+                <title>Guacamole</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/slidersede_05.jpg</url>
+                <title>Molcajete</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/2401964661_f5753c8528.jpg</url>
+                <title>Ceviche surtido</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/comida-bicentenario.jpg</url>
+                <title>Tacos Dorados</title>
+                <description>De carne, pollo, camaron.</description>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/photo_798.jpg</url>
+                <title>Coctel de camaron</title>
+                <description>Tambien conocidos como &quot;camarones para pelar&quot; o simplemente &quot;Camarones Cocidos&quot;</description>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/veracruz.jpg</url>
+                <title>Pescado Frito</title>
+                <description>Acompañado de ensalada fria.</description>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/Captura-de-pantalla-2012-10-23-a-las-17.00.42.png</url>
+                <title>Aguachile</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/pollo-asado-estilo-sinaloa_MLM-O-3224175944_102012.jpg</url>
+                <title>Pollo Asado</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/527_2.jpg</url>
+                <title>Tamales</title>
+                <description>De camaron, carne de puerco o res, polllo.</description>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/chilorio.jpg</url>
+                <title>Chilorio</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/dameimagenmediana.gif</url>
+                <title>Platillos bicentenarios</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/lionsos4.jpg</url>
+                <title>Platillos de Mariscos</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/mazatlan.jpg</url>
+                <title>Langosta y Camarones</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/Receta-de-tostadas-de-pollo.jpg</url>
+                <title>Tostadas de Pollo</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/comidas/tumblr_ljdc6gCSkY1qijcd3o1_500.jpg</url>
+                <title>Tacos</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

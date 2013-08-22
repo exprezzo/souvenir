@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>fade</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>Malecon</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>slices</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/studio/</ImageTemplate>
+            <ImageTemplateName>Studio</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/malecon/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/malecon</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>33</SlideshowDelay>
+            <SlideshowDuration>36</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>studio</TemplateName>
+            <ThumbAlign>right</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/01-BAH1.jpg</url>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/74369_zoom.jpg</url>
+                <title>Monumento al Pescador</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/2779504.jpg</url>
+                <title>2779504</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/33228010150498906822314.jpg</url>
+                <title>33228010150498906822314</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/img5044.jpg</url>
+                <title>img5044</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/souvenir/web/imagenes/mazatlan/malecón/Malecon de Mazatlan.jpg</url>
+                <title>Malecon de Mazatlan</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>
