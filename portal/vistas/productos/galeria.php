@@ -78,7 +78,7 @@
 
 <h2 id="titulo_categoria" style="margin-bottom:20px ;color:#9eb612;font-size:17.21px; font-weight:bold; font-family:'Tahoma'; "><?php  echo  $pagina['nombre'.$sufijo]; ?></h2> 
 
-<ul class="productos">
+<ul class="productos" style="text-align: center; margin-top: 26px; position: relative;">
 	<?php
 		
 		foreach($this->categorias as $prod){
@@ -96,7 +96,7 @@
 			$target="#";
 			// echo '<li><a href="'.$target.'"><img width="50" height="50" src="'.$imagen.'" /><span>'.$titulo.'</span></a></li>';
 		?>	
-			<li style=" margin-right:22px; margin-bottom:19px;">
+			<li style=" margin-right:22px; margin-bottom:19px; box-shadow: 3px 6px 17px -8px;-moz-box-shadow: 3px 6px 17px -8px; -webkit-box-shadow: 3px 6px 17px -8px;">
 				<a href="<?php echo $APP_PATH.$_idioma.'/portal/productos/ver/'.$prod['id'].'/'.$prod['nombre'.$sufijo]; ?>">
 				<img src="<?php echo $imagen; ?>" width="186" height="122" style="display:block;border-radius: 8px; "/>				
 				<div style="background-color:#e8e8e8;  padding:5px 6px 7px 9px;  border-top:0; position:relative; margin-top:-26px; border-radius: 0 0 6px 6px;">

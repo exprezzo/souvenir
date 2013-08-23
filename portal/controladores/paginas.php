@@ -48,8 +48,8 @@ class Paginas extends Controlador{
 			'target'	=>'paginas/inicio'
 		);
 		$menus[]=array(
-			'titulo'	=>'Galeria',
-			'titulo_en'	=>'Gallery',
+			'titulo'	=>'Productos',
+			'titulo_en'	=>'Products',
 			'target'	=>'productos/galeria'
 		);
 		$menus[]=array(

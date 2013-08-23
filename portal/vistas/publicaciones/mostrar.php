@@ -76,7 +76,7 @@ if ( !empty($this->total) ){
 	echo '</ul>';
 }
 ?>
-<ul class="productos">
+<ul class="productos" >
 	<?php
 		if (sizeof($this->publicaciones) ==0 ){
 			echo '<br/><h2 style="color:red;">No hay publicaciones en la categoria<h2>';

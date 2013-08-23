@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>slide</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>Vainilla</GalleryName>
+            <GallerySuffix>2</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>squares</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>220</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/vernisage/</ImageTemplate>
+            <ImageTemplateName>Vernisage</ImageTemplateName>
+            <ImageWidth>320</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/productos/vainillas/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/productos/vainillas</PublishPath>
+            <PublishPreview>false</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>8</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>vernisage</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/food_miles/vainilla/my mazatlan souvenirs canon 158.JPG</url>
+                <title>my mazatlan souvenirs canon 158</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/food_miles/vainilla/my mazatlan souvenirs canon 159.JPG</url>
+                <title>my mazatlan souvenirs canon 159</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/food_miles/vainilla/my mazatlan souvenirs canon 160.JPG</url>
+                <title>my mazatlan souvenirs canon 160</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/food_miles/vainilla/my mazatlan souvenirs canon 161.JPG</url>
+                <title>my mazatlan souvenirs canon 161</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>
