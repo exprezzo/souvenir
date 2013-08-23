@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>slide</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>anillos</GalleryName>
+            <GallerySuffix>2</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>squares</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>220</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/vernisage/</ImageTemplate>
+            <ImageTemplateName>Vernisage</ImageTemplateName>
+            <ImageWidth>320</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Zesar/Desktop/productos/anillos/index.html</PublishFileName>
+            <PublishIndex>index.html</PublishIndex>
+            <PublishPath>C:/Users/Zesar/Desktop/productos/anillos</PublishPath>
+            <PublishPreview>false</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>8</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>vernisage</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 010.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 010</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 011.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 011</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 012.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 012</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 013.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 013</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 014.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 014</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 015.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 015</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 016.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 016</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 017.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 017</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 018.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 018</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 019.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 019</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 020.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 020</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 021.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 021</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 022.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 022</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 023.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 023</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 024.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 024</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 025.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 025</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 026.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 026</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 027.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 027</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 028.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 028</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/MY MAZATLAN SOUVENIRS 029.JPG</url>
+                <title>MY MAZATLAN SOUVENIRS 029</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 179.JPG</url>
+                <title>my mazatlan souvenirs canon 179</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 180.JPG</url>
+                <title>my mazatlan souvenirs canon 180</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 181.JPG</url>
+                <title>my mazatlan souvenirs canon 181</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 182.JPG</url>
+                <title>my mazatlan souvenirs canon 182</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 183.JPG</url>
+                <title>my mazatlan souvenirs canon 183</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 184.JPG</url>
+                <title>my mazatlan souvenirs canon 184</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 185.JPG</url>
+                <title>my mazatlan souvenirs canon 185</title>
+            </Image>
+            <Image>
+                <url>C:/Users/Zesar/Desktop/fotos_souvenir/2013-08-20 MY MAZATLAN SOUVENIRS/productos/joyeria/anillos/my mazatlan souvenirs canon 186.JPG</url>
+                <title>my mazatlan souvenirs canon 186</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

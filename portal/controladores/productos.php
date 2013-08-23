@@ -150,7 +150,11 @@ class productos extends Controlador{
 		$vista->datos=$obj;		
 		
 		global $_PETICION;
-		$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
+		if ( $_SESSION['userInfo']['rol']==1 ){
+			$vista->mostrar('/'.$_PETICION->controlador.'/edicion_dev');
+		}else{
+			$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
+		}
 		
 		
 	}
@@ -240,8 +244,27 @@ class productos extends Controlador{
 		
 		// print_r( $imagenes['datos']);
 		$vista->imagenes=$imagenes['datos'];
+			/*	*/
 		
-		return parent::editar();
+		$id=empty( $_REQUEST['id'])? 0 : $_REQUEST['id'];
+		$model=$this->getModel();
+		$params=array(
+			$this->pk=>$id
+		);		
+		
+		$obj=$model->obtener( $params );	
+
+		$vista=$this->getVista();				
+		$vista->datos=$obj;		
+		
+		global $_PETICION;
+		
+		if ( $_SESSION['userInfo']['rol']==1 ){
+			$vista->mostrar('/'.$_PETICION->controlador.'/edicion_dev');
+		}else{
+			$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
+		}
+		
 	}
 	
 	function obtenerImagenes(){		

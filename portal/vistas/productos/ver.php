@@ -97,7 +97,8 @@ if ( !empty($this->totalProductos) ){
 			$titulo=$prod['nombre'.$sufijo];
 			$descripcion=$prod['descripcion'.$sufijo];
 			$imagen=(empty($prod['imagen']) )?  $WEB_BASE.'imagenes/no-image.jpg' : $WEB_BASE.'imagenes/'.$prod['imagen'];
-			$precio=$prod['precio'.$sufijo];
+			// $precio=$prod['precio'.$sufijo];
+			$precio=$prod['precio'];
 			if ($_idioma=='en'){
 				$target=$APP_PATH.$_idioma.'/portal/products/view/'.$categoriaActual['id'].'/'.str_replace(' ','_',$titulo);
 			}else{

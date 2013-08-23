@@ -176,15 +176,18 @@
 			columns: [ 
 			    // { dataKey: "id", hidden:true, visible:true, headerText: "ID" }						
 				
-{ dataKey: "id", visible:true, headerText: "Id" },
-{ dataKey: "codigo", visible:true, headerText: "Codigo" },
+{ dataKey: "id", visible:false, headerText: "Id" },
+{ dataKey: "codigo", visible:false, headerText: "Codigo" },
 { dataKey: "nombre", visible:true, headerText: "Nombre" },
 { dataKey: "descripcion", visible:true, headerText: "Descripcion" },
 { dataKey: "precio", visible:true, headerText: "Precio" },
-{ dataKey: "imagen", visible:true, headerText: "Imagen" },
-{ dataKey: "nombre_en", visible:true, headerText: "Nombre_en" },
-{ dataKey: "descripcion_en", visible:true, headerText: "Descripcion_en" },
-{ dataKey: "orden", visible:true, headerText: "Orden" }
+{ dataKey: "imagen", visible:false, headerText: "Imagen" },
+{ dataKey: "nombre_en", visible:false, headerText: "Nombre_en" },
+{ dataKey: "descripcion_en", visible:false, headerText: "Descripcion_en" },
+{ dataKey: "orden", visible:false, headerText: "Orden" },
+{ dataKey: "precio_en", visible:false, headerText: "precio_en" },
+{ dataKey: "fk_categoria", visible:false, headerText: "fk_categoria" },
+{ dataKey: "galeria", visible:false, headerText: "galeria" }
 			]
 		});
 		

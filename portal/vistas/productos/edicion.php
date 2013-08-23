@@ -110,57 +110,59 @@
 			if (!isset($this->datos)){		
 				$this->datos=array();		
 			}
+			
 		?>
 		
-		<form class="frmEdicion" style="padding-top:10px;">				
+		<form class="frmEdicion" style="padding-top:10px; display:inline-block;">				
+			<img src="<?php echo $WEB_BASE.'imagenes/'.$this->datos['imagen']; ?>" width="200" style="float:right; margin-bottom:20px;" />
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Id:</label>
+				<input type="text" name="id" class="txt_id" value="<?php echo $this->datos['id']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Codigo:</label>
+				<input type="text" name="codigo" class="txt_codigo" value="<?php echo $this->datos['codigo']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; clear:both;"  >
+				<label style="">Nombre:</label>
+				<input type="text" name="nombre" class="txt_nombre" value="<?php echo $this->datos['nombre']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Categoria:</label>
+				<input type="text" name="fk_categoria" class="txt_fk_categoria" value="<?php echo $this->datos['fk_categoria']; ?>" style="width:500px;" />
+			</div>
 			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Id:</label>
-	<input type="text" name="id" class="txt_id" value="<?php echo $this->datos['id']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Codigo:</label>
-	<input type="text" name="codigo" class="txt_codigo" value="<?php echo $this->datos['codigo']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Nombre:</label>
-	<input type="text" name="nombre" class="txt_nombre" value="<?php echo $this->datos['nombre']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Categoria:</label>
-	<input type="text" name="fk_categoria" class="txt_fk_categoria" value="<?php echo $this->datos['fk_categoria']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Descripcion:</label>
-	<input type="text" name="descripcion" class="txt_descripcion" value="<?php echo $this->datos['descripcion']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Precio:</label>
-	<input type="text" name="precio" class="txt_precio" value="<?php echo $this->datos['precio']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Imagen:</label>
-	<input type="text" name="imagen" class="txt_imagen" value="<?php echo $this->datos['imagen']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Nombre_en:</label>
-	<input type="text" name="nombre_en" class="txt_nombre_en" value="<?php echo $this->datos['nombre_en']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Precio_en:</label>
-	<input type="text" name="precio_en" class="txt_precio_en" value="<?php echo $this->datos['precio_en']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Descripcion_en:</label>
-	<input type="text" name="descripcion_en" class="txt_descripcion_en" value="<?php echo $this->datos['descripcion_en']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Galeria:</label>
-	<input type="text" name="galeria" class="txt_orden" value="<?php echo $this->datos['galeria']; ?>" style="width:500px;" />
-</div>
-<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
-	<label style="">Orden:</label>
-	<input type="text" name="orden" class="txt_orden" value="<?php echo $this->datos['orden']; ?>" style="width:500px;" />
-</div>
+				<label style="">Descripcion:</label>
+				<textarea name="descripcion" style="width:500px;"> <?php echo $this->datos['descripcion']; ?></textarea>				
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+				<label style="">Precio:</label>
+				<input type="text" name="precio" class="txt_precio" value="<?php echo $this->datos['precio']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Imagen:</label>
+				<input type="text" name="imagen" class="txt_imagen" value="<?php echo $this->datos['imagen']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+				<label style="">Nombre Ing:</label>
+				<input type="text" name="nombre_en" class="txt_nombre_en" value="<?php echo $this->datos['nombre_en']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Precio_en:</label>
+				<input type="text" name="precio_en" class="txt_precio_en" value="<?php echo $this->datos['precio_en']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%;"  >
+				<label style="">Descripcion Ing:</label>
+				<textarea name="descripcion_en" style="width:500px;"><?php echo $this->datos['descripcion_en']; ?></textarea>				
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Galeria:</label>
+				<input type="text" name="galeria" class="txt_orden" value="<?php echo $this->datos['galeria']; ?>" style="width:500px;" />
+			</div>
+			<div class="inputBox" style="margin-bottom:8px;display:block;margin-left:10px;width:100%; display:none;"  >
+				<label style="">Orden:</label>
+				<input type="text" name="orden" class="txt_orden" value="<?php echo $this->datos['orden']; ?>" style="width:500px;" />
+			</div>
 
 		</form>
 			<div class="selector_imagenes">
@@ -198,7 +200,7 @@
 			
 		</div>
 		</div>
-		<div class="imagenes" style="width:754px;">
+		<div class="imagenes" style="width:754px; display:none;">
 			<div class="toolbarDetalles" style="padding:none; margin-bottom:5px; ">
 				<button class="btnAgregar" style="padding:none;"></button><h2 style="display: inline-block;padding: 0 0 0 10px;margin: 0;">Imagenes</h2><h2 class=""></h2>
 			</div>
