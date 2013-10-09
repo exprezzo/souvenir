@@ -247,7 +247,7 @@ class productos extends Controlador{
 			/*	*/
 		
 		$id=empty( $_REQUEST['id'])? 0 : $_REQUEST['id'];
-		$model=$this->getModel();
+		$model=$this->getModelo();
 		$params=array(
 			$this->pk=>$id
 		);		

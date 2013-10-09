@@ -9,8 +9,8 @@
 $imagen = ( empty($this->producto['imagen']) )? 'sin_imagen.png' : $this->producto['imagen'];
 $nombre = $this->producto['nombre'.$sufijo];
 $codigo = $this->producto['codigo'];
-// $precio = $this->producto['precio'.$sufijo];
-$precio = $this->producto['precio'];
+$precio = $this->producto['precio'.$sufijo];
+// $precio = $this->producto['precio'];
 $descripcion = $this->producto['descripcion'.$sufijo];
 
 	$rutaEs		=$APP_PATH.'es/portal/productos/detalle/'.$this->producto['id'].'/'.str_replace(" ",'_',$this->producto['nombre'.$sufijo]); 

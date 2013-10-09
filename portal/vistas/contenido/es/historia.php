@@ -8,12 +8,11 @@
 ?>
 
 <div class="publicacion_wrap" >
-	<h2 class="titulo_publicacion"  style="">Nosotros</h2> 
+	<h2 class="titulo_publicacion"  style="margin:10px 0 10px 0 !important;">Nosotros</h2> 
 	<div class="articulo " style="text-align:left;">
-		<p class="contenido_publicacion">
-		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQMB7fEHYMTpvBJ_Efm5h13LH8dD2Qx2WVGNBch0lKEBIYn-KiR" style="float:left; width:200px; boder-radius:9px; padding-right:10px; "/>
-		Contrario a la creencia popular, Lorem Ipsum no es un texto al azar. Tiene sus raices en una pieza clasica de la literatura Latina de 45 AC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompan
+		<p class="contenido_publicacion" style="font-size: 15PX;line-height: 22px;">
+		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQMB7fEHYMTpvBJ_Efm5h13LH8dD2Qx2WVGNBch0lKEBIYn-KiR" style="float:left; width:150px; boder-radius:9px; padding-right:10px; "/>
+		Mazatlán es un paraíso vacacional, sin duda unos de sus principales atractivos son sus hermosas playas, con una gran variedad, usted podrá elegir en cuál de todas quiere tomar un refrescante baño de mar y asolearse en su suave arena, Mazatlán le ofrece la oportunidad de hacer de sus vacaciones un recuerdo inolvidable, no deje pasar esta oportunidad, y cuando visite Mazatlán venga preparado para divertirse en grande y adquirir un sensacional bronceado. A continuación te presento las playas mas representativas de Mazatlán.
 		</p>
 		
 	</div>

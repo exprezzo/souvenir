@@ -4,11 +4,13 @@
 * This program is licensed under the GNU GPL.
 * By Ando Saabas          ando(a t)cs.ioc.ee
 ********************************************/
+
 //error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING); 
-error_reporting(E_ALL); 
-$include_dir = "./include"; 
-include ("$include_dir/commonfuncs.php");
-//extract(getHttpVars());
+error_reporting(E_ALL ^ E_NOTICE);
+// $include_dir = "../sphider-1.3.6/include"; 
+// include ("$include_dir/commonfuncs.php");
+extract(getHttpVars());
+$type='';
 
 if (isset($_GET['query']))
 	$query = $_GET['query'];
@@ -30,24 +32,25 @@ if (isset($_GET['adv']))
 	$adv = $_GET['adv'];
 	
 	
-$include_dir = "./include"; 
-$template_dir = "./templates"; 
-$settings_dir = "./settings"; 
-$language_dir = "./languages";
+$include_dir = "../sphider-1.3.6/include"; 
+$template_dir = "../sphider-1.3.6/templates"; 
+$settings_dir = "../sphider-1.3.6/settings"; 
+$language_dir = "../sphider-1.3.6/languages";
+
+$template='standard';
+// require_once("$settings_dir/database.php");
+// require_once("$language_dir/en-language.php");
+// require_once("$include_dir/searchfuncs.php");
+// require_once("$include_dir/categoryfuncs.php");
 
 
-require_once("$settings_dir/database.php");
-require_once("$language_dir/en-language.php");
-require_once("$include_dir/searchfuncs.php");
-require_once("$include_dir/categoryfuncs.php");
+// include "$settings_dir/conf.php";
+
+// include "$template_dir/$template/header.html";
+// include "$language_dir/$language-language.php";
 
 
-include "$settings_dir/conf.php";
-
-include "$template_dir/$template/header.html";
-include "$language_dir/$language-language.php";
-
-
+// global $type; echo $type; exit;
 if ($type != "or" && $type != "and" && $type != "phrase") { 
 	$type = "and";
 }
@@ -89,7 +92,7 @@ if ($count_level0) {
 
 
 
-require_once("$template_dir/$template/search_form.html");
+// require_once("$template_dir/$template/search_form.html");
 
 
 function getmicrotime(){
@@ -102,7 +105,8 @@ function getmicrotime(){
 function poweredby () {
 	global $sph_messages;
     //If you want to remove this, please donate to the project at http://www.sphider.eu/donate.php
-    // print $sph_messages['Powered by'];?>  <a href="http://www.sphider.eu/"><img src="sphider-logo.png" border="0" style="vertical-align: middle" alt="Sphider"></a>
+	global $APP_PATH;
+    print $sph_messages['Powered by'];?>  <a href="http://www.sphider.eu/"><img src="<?php echo $APP_PATH; ?>sphider-1.3.6/sphider-logo.png" border="0" style="vertical-align: middle" alt="Sphider"></a>
 
     <?php 
 }
@@ -141,5 +145,5 @@ switch ($search) {
 	break;
 	}
 
-include "$template_dir/$template/footer.html";
+// include "$template_dir/$template/footer.html";
 ?>

@@ -33,6 +33,8 @@ $pagina['footer_en']='Footer text Footer text  Footer text Footer text Footer te
 			background-image: url(<?php echo $WEB_BASE.'imagenes/esq_sup_izq_portal.png'; ?> ), url(<?php echo $WEB_BASE.'imagenes/bg_header_portal.png'; ?> );						
 		}
 	
+	
+		
 		#logo{
 			top:56px; position:relative; left:132px;text-decoration:none;
 		}
@@ -79,12 +81,13 @@ $pagina['footer_en']='Footer text Footer text  Footer text Footer text Footer te
 		
 		#contenido_derecha{display:inline-block; vertical-align:top; width:720px; margin-left:32px;}
 		
-		#menu { display:inline-block; margin-left: 153px; top: 18px; position: relative; }
-		#menu li{ display:inline-block;   text-align:center; position:relative; border-left: white 1px solid; padding: 0 10px 0 10px; height: 9px;}
-		#menu li:last-child{  border-right: white 1px solid; }
-		#menu a{ color:white; text-decoration:none; font-family: "Tahoma"; font-weight:bold; font-size:10.4px; z-index:1; position:relative; top: -5px;} 		
+		#menu, .menu{ display:inline-block; margin-left: 153px; top: 18px; position: relative; }
+		#menu li, .menu li{ display:inline-block;   text-align:center; position:relative; border-left: white 1px solid; padding: 0 10px 0 10px; height: 9px;}
+		#menu li:last-child,.menu li:last-child{  border-right: white 1px solid; }
+		#menu a, .menu a{ color:white; text-decoration:none; font-family: "Tahoma"; font-weight:bold; font-size:10.4px; z-index:1; position:relative; top: -5px;} 		
 		#menu a.activo{ border-bottom: white 2px solid; padding-bottom: 3px; }
-		
+		.menu a{top:-1px;}
+		.menu a:visted{color:white;}
 /*		
 		#menu li:after{
 			content: ''; top:4px; border-left: white 1px solid;			
